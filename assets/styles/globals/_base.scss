@@ -1,3 +1,5 @@
+@import 'vars';
+
 html {
   box-sizing: border-box;
 }
@@ -14,11 +16,65 @@ body {
 *:after,
 *:before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.03em;
 }
 
 *:focus {
   outline: none;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.transition {
+  transition: all 0.2s;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+@each $name, $weight in $font-weights {
+  .font-weight-#{$name} {
+    font-family: 'Inter', sans-serif;
+    font-weight: $weight;
+  }
+}
+
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+}
+
+@each $name, $color in $colors {
+  .theme-#{$name} {
+    background-color: $color;
+  }
 }

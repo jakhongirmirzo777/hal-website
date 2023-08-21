@@ -1,9 +1,19 @@
+$font-weights: (
+  ('extra-bold', 800),
+  ('bold', 700),
+  ('semi-bold', 600),
+  ('medium', 500),
+  ('regular', 400)
+);
+
 $colors: (
   'white': #ffffff,
-  'black': #23262F,
-  'blue': #3B71FE,
-  'gray': #777E90
+  'black': #23262f,
+  'blue': #3b71fe,
+  'gray': #777e90,
 );
+
+$grid-widths: (320px, 768px, 1000px, 1440px);
 
 :root {
   @each $name, $color in $colors {
