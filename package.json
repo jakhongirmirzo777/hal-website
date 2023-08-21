@@ -1,5 +1,5 @@
 {
-  "name": "HAL-website",
+  "name": "hal-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,15 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
+    "nuxt-sweetalert2": "^1.0.0",
+    "swiper": "5.x",
+    "v-mask": "^2.3.0",
+    "vee-validate": "^3.4.15",
     "vue": "^2.7.10",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
@@ -28,6 +34,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sass": "^1.63.6",
+    "sass-loader": "^10.4.1"
   }
 }
