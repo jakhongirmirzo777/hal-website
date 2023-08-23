@@ -65,11 +65,6 @@ export default {
       isEnd: false,
     }
   },
-  computed: {
-    swiper() {
-      return this.$refs?.mySwiper?.$swiper
-    },
-  },
   methods: {
     onClickPrev() {
       const index = this.$refs.mySwiper.$swiper.realIndex
