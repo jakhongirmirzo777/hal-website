@@ -29,7 +29,11 @@ export default {
   css: ['~/assets/styles/globals/index.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '@/plugins/vue-awesome-swiper', ssr: false },
+    { src: '@/plugins/vee-validate.js', ssr: false },
+    { src: '@/plugins/v-mask.js', ssr: false },
+  ],
 
   // Auto import layouts: https://go.nuxtjs.dev/config-components
   components: true,
@@ -54,5 +58,7 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vee-validate/dist/rules'],
+  },
 }

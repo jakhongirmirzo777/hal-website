@@ -1,0 +1,92 @@
+<template>
+  <div class="benefits__wrapper">
+    <div class="benefits__choose">
+      <h2>Why choose us?</h2>
+      <p>
+        Have your car shipped to and from any state - safely, fast, with no risk
+        or damage.
+      </p>
+    </div>
+    <div class="benefits__slides">
+      <ClientOnly>
+        <Swiper ref="mySwiper" :options="swiperOptions">
+          <SwiperSlide v-for="slide in swiperData" :key="slide.id">
+            <div class="benefits__slide">
+              <div class="benefits__slide__icon">
+                <VIcon :icon="slide.icon" size="32" />
+              </div>
+              <h4>
+                {{ slide.title }}
+              </h4>
+              <p>{{ slide.description }}</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <div class="benefits__slides__controllers">
+          <button
+            class="benefits__slides__controllers__btn mr-8"
+            :disabled="isStart"
+            :class="{
+              disabled: isStart,
+            }"
+            @click="onClickPrev"
+          >
+            <VIcon size="24" icon="arrow-left" />
+          </button>
+          <button
+            class="benefits__slides__controllers__btn"
+            :disabled="isEnd"
+            :class="{
+              disabled: isEnd,
+            }"
+            @click="onClickNext"
+          >
+            <VIcon size="24" icon="arrow-right" />
+          </button>
+        </div>
+      </ClientOnly>
+    </div>
+  </div>
+</template>
+
+<script>
+import data from '~/data/home-benefits'
+import VIcon from '~/components/ui/VIcon'
+export default {
+  name: 'HomeBenefits',
+  components: { VIcon },
+  data() {
+    return {
+      swiperOptions: {
+        slidesPerView: 'auto',
+      },
+      swiperData: data,
+      isStart: true,
+      isEnd: false,
+    }
+  },
+  computed: {
+    swiper() {
+      return this.$refs?.mySwiper?.$swiper
+    },
+  },
+  methods: {
+    onClickPrev() {
+      const index = this.$refs.mySwiper.$swiper.realIndex
+      this.$refs.mySwiper.$swiper.slideTo(index - 1)
+      this.isStart = this.$refs.mySwiper.$swiper.isBeginning
+      this.isEnd = this.$refs.mySwiper.$swiper.isEnd
+    },
+    onClickNext() {
+      const index = this.$refs.mySwiper.$swiper.realIndex
+      this.$refs.mySwiper.$swiper.slideTo(index + 1)
+      this.isStart = this.$refs.mySwiper.$swiper.isBeginning
+      this.isEnd = this.$refs.mySwiper.$swiper.isEnd
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../../assets/styles/pages/home-benefits';
+</style>

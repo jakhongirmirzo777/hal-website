@@ -1,3 +1,3 @@
 <template>
-  <div>Footer</div>
+  <div style="margin-top: 100px">Footer</div>
 </template>
