@@ -1,9 +1,13 @@
 <template>
-  <div>fdfd</div>
+  <div>
+    <HomeForm />
+  </div>
 </template>
 
 <script>
+import HomeForm from '~/components/pages/HomeForm'
 export default {
   name: 'IndexPage',
+  components: { HomeForm },
 }
 </script>

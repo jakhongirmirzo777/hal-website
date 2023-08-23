@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/styles/components/the-header';
+@import '../../assets/styles/layouts/the-header';
 </style>
