@@ -6,7 +6,11 @@
     </div>
     <div class="offer__slides">
       <ClientOnly>
-        <Swiper ref="mySwiper" :options="swiperOptions">
+        <Swiper
+          ref="mySwiper"
+          :options="swiperOptions"
+          @slide-change="onChangeSlide"
+        >
           <SwiperSlide v-for="slide in swiperData" :key="slide.id">
             <div class="offer__slide">
               <div class="offer__slide__image">
@@ -63,6 +67,10 @@ export default {
     }
   },
   methods: {
+    onChangeSlide() {
+      this.isStart = this.$refs.mySwiper.$swiper.isBeginning
+      this.isEnd = this.$refs.mySwiper.$swiper.isEnd
+    },
     onClickPrev() {
       const index = this.$refs.mySwiper.$swiper.realIndex
       this.$refs.mySwiper.$swiper.slideTo(index - 1)
