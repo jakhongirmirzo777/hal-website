@@ -50,7 +50,9 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="home-form__btn">Let’s go!</button>
+        <button type="submit" class="home-form__btn cursor-pointer">
+          Let’s go!
+        </button>
       </form>
     </div>
   </div>
