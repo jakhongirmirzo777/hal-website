@@ -1,4 +1,5 @@
 .header {
+  $screen-height: calc((var(--vh, 1vh) * 100));
   padding: 48px 24px 24px;
 
   &__logo__text {
@@ -42,6 +43,67 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__top.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 107px;
+    width: 100%;
+    background-color: var(--color-white);
+    z-index: 7;
+  }
+
+  &__menu {
+    &__opened {
+      height: calc(#{$screen-height} - 107px);
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 107px;
+      z-index: 7;
+      background-color: var(--color-white);
+      padding: 56px 0 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__rights {
+      color: var(--color-black);
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-block;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+    }
+
+    &__list__item {
+      a {
+        text-decoration: none;
+        color: var(--color-black);
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      a:active {
+        color: var(--color-blue);
+      }
+
+      a.nuxt-link-exact-active {
+        color: var(--color-blue);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
     }
   }
 }
