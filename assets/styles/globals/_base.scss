@@ -10,6 +10,7 @@ body {
   color: var(--color-black);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 *,
@@ -81,7 +82,7 @@ body {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.2s;
 }
 .fade-enter,
 .fade-leave-to {

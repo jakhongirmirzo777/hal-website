@@ -2,7 +2,7 @@
   <div>
     <div
       class="d-flex justify-between align-center header header__top"
-      :class="{ active: isMenuOpen }"
+      :class="{ active: isMenuOpen, 'is-fixed': isScrolled }"
     >
       <div class="d-flex align-center">
         <VIcon class="mr-8" icon="logo" size="35" />
@@ -16,6 +16,7 @@
         <span class="header__menu__right" :class="{ open: isMenuOpen }" />
       </div>
     </div>
+    <TheForm :is-scrolled="isScrolled" />
     <div v-if="isMenuOpen" style="height: 107px" />
     <transition name="fade">
       <div v-if="isMenuOpen" class="header__menu__opened">
@@ -46,6 +47,7 @@
 </template>
 <script>
 import VIcon from '~/components/ui/VIcon'
+import TheForm from '~/components/layouts/TheForm'
 
 const navs = [
   {
@@ -82,14 +84,25 @@ const navs = [
   },
 ]
 export default {
-  components: { VIcon },
+  components: { TheForm, VIcon },
   data() {
     return {
       isMenuOpen: false,
+      isScrolled: false,
       navs,
     }
   },
+  mounted() {
+    document.addEventListener('scroll', this.toggleHeaderFixed)
+  },
+  beforeDestroy() {
+    document.removeEventListener('scroll', this.toggleHeaderFixed)
+  },
   methods: {
+    toggleHeaderFixed() {
+      const { scrollY } = window
+      this.isScrolled = scrollY > 107
+    },
     setIsMenuOpen() {
       this.isMenuOpen = !this.isMenuOpen
     },
