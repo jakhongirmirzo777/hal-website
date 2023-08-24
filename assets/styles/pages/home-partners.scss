@@ -1,0 +1,51 @@
+.partners {
+  &__wrapper {
+    padding-top: 65px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+
+    h2 {
+      color: var(--color-black);
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      color: var(--color-gray);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__slides {
+  }
+
+  &__slide {
+    margin: 0 6px;
+
+    img {
+      height: 75px;
+      width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__top {
+      margin-bottom: 25px;
+    }
+
+    &__bottom {
+    }
+  }
+}
+
+.swiper-slide {
+  width: 33% !important;
+}
