@@ -7,6 +7,7 @@
     <HomeOffer />
     <HomePartners />
     <HomeFaq />
+    <HomeBanner />
     <HomeBlog />
   </div>
 </template>
@@ -20,9 +21,11 @@ import HomeOffer from '~/components/pages/HomeOffer'
 import HomePartners from '~/components/pages/HomePartners'
 import HomeFaq from '~/components/pages/HomeFaq'
 import HomeBlog from '~/components/pages/HomeBlog'
+import HomeBanner from '~/components/pages/HomeBanner'
 export default {
   name: 'IndexPage',
   components: {
+    HomeBanner,
     HomeBlog,
     HomeFaq,
     HomePartners,
