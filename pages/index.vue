@@ -7,6 +7,7 @@
     <HomeOffer />
     <HomePartners />
     <HomeFaq />
+    <HomeBlog />
   </div>
 </template>
 
@@ -18,9 +19,11 @@ import HomeProcess from '~/components/pages/HomeProcess'
 import HomeOffer from '~/components/pages/HomeOffer'
 import HomePartners from '~/components/pages/HomePartners'
 import HomeFaq from '~/components/pages/HomeFaq'
+import HomeBlog from '~/components/pages/HomeBlog'
 export default {
   name: 'IndexPage',
   components: {
+    HomeBlog,
     HomeFaq,
     HomePartners,
     HomeOffer,
