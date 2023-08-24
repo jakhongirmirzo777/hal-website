@@ -1,0 +1,8 @@
+.v-collapse {
+  &__top,
+  &__bottom {
+    &.open {
+      overflow: unset !important;
+    }
+  }
+}
