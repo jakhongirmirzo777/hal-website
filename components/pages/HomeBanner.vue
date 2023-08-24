@@ -10,7 +10,7 @@
       <div class="banner__input">
         <input type="text" />
         <span class="banner__input__icon">
-          <VIcon icon="arrow-right" />
+          <VIcon icon="arrow-right-white" />
         </span>
       </div>
     </div>
