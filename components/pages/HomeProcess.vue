@@ -4,12 +4,14 @@
       <h2>How it work</h2>
       <p>Keep calm & travel on</p>
     </div>
-    <div v-for="item in data" :key="item.id" class="process__box">
-      <div class="process__icon" :style="{ backgroundColor: item.color }">
-        <VIcon size="24" :icon="item.icon" />
+    <div class="process__box__wrapper">
+      <div v-for="item in data" :key="item.id" class="process__box">
+        <div class="process__icon" :style="{ backgroundColor: item.color }">
+          <VIcon size="24" :icon="item.icon" />
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
       </div>
-      <h3>{{ item.title }}</h3>
-      <p>{{ item.description }}</p>
     </div>
   </div>
 </template>
