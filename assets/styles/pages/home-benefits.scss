@@ -29,6 +29,14 @@
   &__slides {
     padding: 0 24px;
     text-align: center;
+
+    & .mobile {
+      display: block;
+    }
+
+    & .desktop {
+      display: none;
+    }
   }
 
   &__slide {
@@ -107,6 +115,14 @@
 
     &__slides {
       padding: 0 160px;
+
+      & .mobile {
+        display: none;
+      }
+
+      & .desktop {
+        display: flex;
+      }
     }
 
     &__slide {

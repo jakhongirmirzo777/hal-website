@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .reviews {
   &__wrapper {
     padding-top: 65px;
@@ -17,6 +19,7 @@
     }
 
     p {
+      color: var(--color-gray);
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
@@ -85,4 +88,30 @@
 
 .swiper-slide {
   width: 85% !important;
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .reviews {
+    &__slides {
+      padding: 0;
+    }
+
+    &__title {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto 48px;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: 23% !important;
+  }
 }

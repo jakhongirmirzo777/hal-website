@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="benefits__slides">
-      <div v-if="false">
+      <div class="mobile">
         <ClientOnly>
           <Swiper
             ref="mySwiper"
@@ -51,7 +51,7 @@
           </div>
         </ClientOnly>
       </div>
-      <div v-else class="container-fluid">
+      <div class="container-fluid desktop">
         <div class="row">
           <div
             v-for="slide in swiperData"
