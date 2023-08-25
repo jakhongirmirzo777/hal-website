@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .faq {
   &__wrapper {
     padding: 90px 24px 0;
@@ -41,5 +43,23 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 150.57%;
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .faq {
+    &__wrapper {
+      padding: 160px 160px 0;
+    }
+
+    &__title {
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
   }
 }
