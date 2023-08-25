@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .partners {
   &__wrapper {
     padding-top: 65px;
@@ -41,12 +43,33 @@
     &__top {
       margin-bottom: 25px;
     }
-
-    &__bottom {
-    }
   }
 }
 
 .swiper-slide {
   width: 33% !important;
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .partners {
+    &__title {
+      margin-bottom: 48px;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    &__slide__bottom {
+      margin-left: 225px;
+    }
+  }
+
+  .swiper-slide {
+    width: 22% !important;
+  }
 }

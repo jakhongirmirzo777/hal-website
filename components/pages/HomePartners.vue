@@ -7,7 +7,7 @@
     <div class="partners__slides">
       <ClientOnly>
         <Swiper ref="mySwiper" :options="swiperOptions">
-          <SwiperSlide v-for="(_, index) in 4" :key="index">
+          <SwiperSlide v-for="(_, index) in 8" :key="index">
             <div class="partners__slide">
               <img
                 class="partners__slide__top"
