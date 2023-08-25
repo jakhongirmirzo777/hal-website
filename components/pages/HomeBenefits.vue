@@ -8,47 +8,66 @@
       </p>
     </div>
     <div class="benefits__slides">
-      <ClientOnly>
-        <Swiper
-          ref="mySwiper"
-          :options="swiperOptions"
-          @slide-change="onChangeSlide"
-        >
-          <SwiperSlide v-for="slide in swiperData" :key="slide.id">
-            <div class="benefits__slide">
-              <div class="benefits__slide__icon">
-                <VIcon :icon="slide.icon" size="32" />
+      <div v-if="false">
+        <ClientOnly>
+          <Swiper
+            ref="mySwiper"
+            :options="swiperOptions"
+            @slide-change="onChangeSlide"
+          >
+            <SwiperSlide v-for="slide in swiperData" :key="slide.id">
+              <div class="benefits__slide">
+                <div class="benefits__slide__icon">
+                  <VIcon :icon="slide.icon" size="32" />
+                </div>
+                <h4>
+                  {{ slide.title }}
+                </h4>
+                <p>{{ slide.description }}</p>
               </div>
-              <h4>
-                {{ slide.title }}
-              </h4>
-              <p>{{ slide.description }}</p>
+            </SwiperSlide>
+          </Swiper>
+          <div class="benefits__slides__controllers">
+            <button
+              class="benefits__slides__controllers__btn mr-8"
+              :disabled="isStart"
+              :class="{
+                disabled: isStart,
+              }"
+              @click="onClickPrev"
+            >
+              <VIcon size="24" icon="arrow-left" />
+            </button>
+            <button
+              class="benefits__slides__controllers__btn"
+              :disabled="isEnd"
+              :class="{
+                disabled: isEnd,
+              }"
+              @click="onClickNext"
+            >
+              <VIcon size="24" icon="arrow-right" />
+            </button>
+          </div>
+        </ClientOnly>
+      </div>
+      <div v-else class="container-fluid">
+        <div class="row">
+          <div
+            v-for="slide in swiperData"
+            :key="slide.id"
+            class="benefits__slide col-4"
+          >
+            <div class="benefits__slide__icon">
+              <VIcon :icon="slide.icon" size="32" />
             </div>
-          </SwiperSlide>
-        </Swiper>
-        <div class="benefits__slides__controllers">
-          <button
-            class="benefits__slides__controllers__btn mr-8"
-            :disabled="isStart"
-            :class="{
-              disabled: isStart,
-            }"
-            @click="onClickPrev"
-          >
-            <VIcon size="24" icon="arrow-left" />
-          </button>
-          <button
-            class="benefits__slides__controllers__btn"
-            :disabled="isEnd"
-            :class="{
-              disabled: isEnd,
-            }"
-            @click="onClickNext"
-          >
-            <VIcon size="24" icon="arrow-right" />
-          </button>
+            <h4>
+              {{ slide.title }}
+            </h4>
+            <p>{{ slide.description }}</p>
+          </div>
         </div>
-      </ClientOnly>
+      </div>
     </div>
   </div>
 </template>

@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .benefits {
   &__wrapper {
     padding: 70px 0 0;
@@ -17,6 +19,7 @@
     }
 
     p {
+      color: var(--color-gray);
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
@@ -82,6 +85,32 @@
       &.disabled {
         border: none;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .benefits {
+    &__choose {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto 48px;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    &__slides {
+      padding: 0 160px;
+    }
+
+    &__slide {
+      margin-bottom: 54px;
     }
   }
 }
