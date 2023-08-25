@@ -112,7 +112,11 @@ export default {
   },
   methods: {
     next() {
-      this.step = this.step + 1
+      if (this.step === 4) {
+        this.step = 1
+      } else {
+        this.step = this.step + 1
+      }
     },
   },
 }
