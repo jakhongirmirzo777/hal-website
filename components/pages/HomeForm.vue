@@ -1,11 +1,30 @@
 <template>
   <div class="home-form__wrapper">
     <div class="home-form__content">
-      <h1>Get your free quote now</h1>
-      <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
-      </p>
+      <div class="home-form__title">
+        <div>
+          <h1>Get your free quote now</h1>
+          <p>
+            Have your car shipped to and from any state - safely, fast, with no
+            risk or damage.
+          </p>
+        </div>
+        <div class="home-form__rating">
+          <div class="home-form__rating--top">
+            <img class="trustpilot" src="/trustpilot.png" alt="trustpilot" />
+            <div class="stars">
+              <img src="/star.png" alt="star" />
+              <img src="/star.png" alt="star" />
+              <img src="/star.png" alt="star" />
+              <img src="/star.png" alt="star" />
+              <img src="/star-half.png" alt="star-half" />
+            </div>
+          </div>
+          <p class="home-form__rating--bottom">
+            4.6 out of 5 based on 245 reviews
+          </p>
+        </div>
+      </div>
       <form class="home-form__form" @submit.prevent="">
         <div class="home-form__form__content">
           <h4>Fill out the form</h4>

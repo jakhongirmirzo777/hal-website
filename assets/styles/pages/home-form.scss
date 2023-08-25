@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .home-form {
   $screen-height: calc((var(--vh, 1vh) * 100));
 
@@ -157,5 +159,90 @@
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .home-form {
+    &__content {
+      padding: 124px 160px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__form {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    &__title {
+      max-width: 500px;
+
+      h1 {
+        font-size: 64px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    &__wrapper {
+      background-image: url('/truck-2.webp');
+      min-height: unset;
+      background-position: top;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .home-form {
+    &__content {
+      padding: 200px 160px;
+    }
+
+    &__rating {
+      margin-top: 32px;
+      padding: 24px;
+      background-color: var(--color-white);
+      border-radius: 16px;
+      max-width: 385px;
+      width: 100%;
+
+      &--top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+
+        &.trustpilot {
+          width: 105px;
+          height: 25px;
+        }
+
+        &.stars {
+          display: flex;
+
+          img {
+            height: 32px;
+            width: 32px;
+            background-size: cover;
+          }
+        }
+      }
+
+      &--bottom {
+        color: var(--color-black) !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+      }
+    }
   }
 }
