@@ -160,10 +160,18 @@
     font-weight: 600;
     text-align: center;
   }
+
+  &__rating {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $desktop-min-offset) {
   .home-form {
+    &__rating {
+      display: block;
+    }
+
     &__content {
       padding: 124px 160px;
       display: flex;
