@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .footer {
   &__wrapper {
     padding: 65px 24px 40px;
@@ -90,5 +92,121 @@
     Span {
       white-space: nowrap;
     }
+  }
+
+  &__wrapper {
+    display: block;
+  }
+
+  &__desktop__wrapper {
+    display: none;
+  }
+}
+
+.footer__desktop {
+  &__wrapper {
+    padding: 65px 160px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: var(--color-gray);
+    font-size: 14px;
+    margin-bottom: 32px;
+    cursor: pointer;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 256px;
+    width: 100%;
+
+    span {
+      color: var(--color-black);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+      margin-left: 8px;
+    }
+  }
+
+  &__right {
+    max-width: 256px;
+    width: 100%;
+    text-align: left;
+
+    p {
+      color: var(--color-black);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__icon {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    z-index: 4;
+    background-color: var(--color-blue);
+  }
+
+  &__input {
+    height: 48px;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 90px;
+      border: 2px solid var(--color-gray-light);
+      z-index: 3;
+      position: relative;
+      padding: 8px 45px 8px 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+    padding: 25px 0;
+
+    &__left {
+      color: var(--color-gray);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .footer__wrapper {
+    display: none;
+  }
+
+  .footer__desktop__wrapper {
+    display: block;
   }
 }
