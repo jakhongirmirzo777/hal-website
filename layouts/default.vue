@@ -1,16 +1,25 @@
 <template>
   <div>
-    <TheHeader />
+    <TheHeaderDesktop />
+    <TheHeaderMobile />
     <NuxtChild />
-    <TheFooter />
+    <TheFooterDesktop />
+    <TheFooterMobile />
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/layouts/TheHeader'
-import TheFooter from '~/components/layouts/TheFooter'
+import TheHeaderDesktop from '~/components/layouts/TheHeaderDesktop'
+import TheFooterDesktop from '~/components/layouts/TheFooterDesktop'
+import TheHeaderMobile from '~/components/layouts/TheHeaderMobile'
+import TheFooterMobile from '~/components/layouts/TheFooterMobile'
 export default {
-  components: { TheFooter, TheHeader },
+  components: {
+    TheFooterMobile,
+    TheHeaderMobile,
+    TheFooterDesktop,
+    TheHeaderDesktop,
+  },
   mounted() {
     this.makeFullScreen()
   },

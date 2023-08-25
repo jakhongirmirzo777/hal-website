@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header__wrapper">
     <div
       class="d-flex justify-between align-center header header__top"
       :class="{ active: isMenuOpen, 'is-fixed': isScrolled }"
@@ -84,6 +84,7 @@ const navs = [
   },
 ]
 export default {
+  name: 'TheHeaderMobile',
   components: { TheForm, VIcon },
   data() {
     return {
