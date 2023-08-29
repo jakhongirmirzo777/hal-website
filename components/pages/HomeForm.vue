@@ -94,6 +94,11 @@
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
               </select>
+              <VIcon
+                class="home-form__icon select"
+                size="22"
+                icon="chevron-down"
+              />
             </div>
             <div class="home-form__group">
               <VIcon class="home-form__icon" size="22" icon="industry" />
@@ -102,6 +107,11 @@
                 <option value="volvo">Acura</option>
                 <option value="saab">Audi</option>
               </select>
+              <VIcon
+                class="home-form__icon select"
+                size="22"
+                icon="chevron-down"
+              />
             </div>
             <div class="home-form__group">
               <VIcon class="home-form__icon" size="22" icon="car" />
@@ -110,6 +120,11 @@
                 <option value="volvo">Giulia</option>
                 <option value="saab">Stelvio</option>
               </select>
+              <VIcon
+                class="home-form__icon select"
+                size="22"
+                icon="chevron-down"
+              />
             </div>
             <div class="home-form__group">
               <VIcon class="home-form__icon" size="22" icon="wrench" />
@@ -118,6 +133,11 @@
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
+              <VIcon
+                class="home-form__icon select"
+                size="22"
+                icon="chevron-down"
+              />
             </div>
           </div>
           <div v-show="step === 3" class="home-form__inputs">

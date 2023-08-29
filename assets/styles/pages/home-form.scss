@@ -128,6 +128,14 @@
     z-index: 2;
   }
 
+  &__icon.select {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
   &__input {
     font-family: 'Poppins', sans-serif;
     position: absolute;
@@ -178,6 +186,14 @@
   .home-form {
     &__rating {
       display: block;
+    }
+
+    &__icon.select {
+      position: absolute;
+      top: 50%;
+      left: 90%;
+      transform: translateY(-50%);
+      z-index: 2;
     }
 
     &__content {
