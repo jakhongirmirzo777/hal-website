@@ -141,6 +141,11 @@
     color: var(--color-gray);
     font-size: 16px;
     font-weight: 600;
+    background-color: var(--color-white);
+
+    & option {
+      padding-left: 56px;
+    }
 
     &::placeholder {
       color: var(--color-gray);
