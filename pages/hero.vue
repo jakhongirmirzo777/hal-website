@@ -7,6 +7,8 @@
     <HeroInfo />
     <HeroWorks />
     <HeroFaq />
+    <HeroForm />
+    <HomeBlog style="margin-top: 100px" />
   </div>
 </template>
 
@@ -18,10 +20,14 @@ import HeroReviews from '~/components/pages/HeroReviews'
 import HeroInfo from '~/components/pages/HeroInfo'
 import HeroWorks from '~/components/pages/HeroWorks'
 import HeroFaq from '~/components/pages/HeroFaq'
+import HeroForm from '~/components/pages/HeroForm'
+import HomeBlog from '~/components/pages/HomeBlog'
 
 export default {
   name: 'HeroPage',
   components: {
+    HomeBlog,
+    HeroForm,
     HeroFaq,
     HeroWorks,
     HeroInfo,
