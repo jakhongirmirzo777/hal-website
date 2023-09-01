@@ -1,0 +1,29 @@
+.cta {
+  &__wrapper {
+    padding: 80px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray-cloud);
+  }
+
+  &__title {
+    max-width: 550px;
+
+    h2 {
+      color: var(--color-blue-dark);
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: var(--color-gray-dark);
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__img {
+  }
+}
