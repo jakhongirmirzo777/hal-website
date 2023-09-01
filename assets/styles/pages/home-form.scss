@@ -12,7 +12,8 @@
     background-size: cover;
     position: relative;
     margin-bottom: calc(
-      #{$form-height} + #{$title-height} + 32px + 90px - 100vh + 107px + 100px
+      #{$form-height} + #{$title-height} + 90px + 32px - #{$screen-height} + 107px +
+        100px
     );
 
     &:before {
