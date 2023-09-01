@@ -5,6 +5,7 @@
     <HeroCTARight />
     <HeroReviews />
     <HeroInfo />
+    <HeroWorks />
   </div>
 </template>
 
@@ -14,8 +15,17 @@ import HeroCTALeft from '~/components/pages/HeroCTALeft'
 import HeroCTARight from '~/components/pages/HeroCTARight'
 import HeroReviews from '~/components/pages/HeroReviews'
 import HeroInfo from '~/components/pages/HeroInfo'
+import HeroWorks from '~/components/pages/HeroWorks'
+
 export default {
   name: 'HeroPage',
-  components: { HeroInfo, HeroReviews, HeroCTARight, HeroCTALeft, HomeForm },
+  components: {
+    HeroWorks,
+    HeroInfo,
+    HeroReviews,
+    HeroCTARight,
+    HeroCTALeft,
+    HomeForm,
+  },
 }
 </script>
