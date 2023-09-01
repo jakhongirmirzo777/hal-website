@@ -2,7 +2,7 @@
 
 .home-form {
   $screen-height: calc((var(--vh, 1vh) * 100));
-  $title-height: calc(var(--title-height) + 32px);
+  $title-height: calc(var(--title-height));
   $form-height: var(--form-height);
 
   &__wrapper {
@@ -12,7 +12,7 @@
     background-size: cover;
     position: relative;
     margin-bottom: calc(
-      #{$form-height} + #{$title-height} + 90px - 100vh + 107px + 100px
+      #{$form-height} + #{$title-height} + 32px + 90px - 100vh + 107px + 100px
     );
 
     &:before {
@@ -55,7 +55,7 @@
 
   &__form {
     position: absolute;
-    top: calc(90px + #{$title-height});
+    top: calc(90px + #{$title-height} + 32px);
     left: 24px;
     width: calc(100% - 48px);
   }
