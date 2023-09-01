@@ -16,7 +16,7 @@ $colors: (
 );
 
 $grid-widths: (320px, 768px, 1000px, 1440px);
-$desktop-min-offset: 768px;
+$desktop-min-offset: 769px;
 
 :root {
   @each $name, $color in $colors {
