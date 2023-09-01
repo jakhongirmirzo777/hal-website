@@ -1,7 +1,7 @@
 <template>
   <div class="home-form__wrapper">
     <div class="home-form__content">
-      <div class="home-form__title">
+      <div ref="title" class="home-form__title">
         <div>
           <h1>Get your free quote now</h1>
           <p>
@@ -25,7 +25,7 @@
           </p>
         </div>
       </div>
-      <form class="home-form__form" @submit.prevent="">
+      <form ref="form" class="home-form__form" @submit.prevent="">
         <div class="home-form__form__content">
           <h4>Fill out the form</h4>
           <p>Fill out the form now and get a discount!</p>
@@ -184,6 +184,22 @@ export default {
     return {
       step: 1,
     }
+  },
+  mounted() {
+    this.addScreenSize()
+  },
+  methods: {
+    addScreenSize() {
+      const titleContainer = this.$refs.title
+      const formContainer = this.$refs.form
+      const titleVh = titleContainer.clientHeight
+      const formVh = formContainer.clientHeight
+      document.documentElement.style.setProperty(
+        '--title-height',
+        `${titleVh}px`
+      )
+      document.documentElement.style.setProperty('--form-height', `${formVh}px`)
+    },
   },
 }
 </script>

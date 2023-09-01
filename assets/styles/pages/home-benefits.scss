@@ -1,10 +1,6 @@
 @import '../globals/vars';
 
 .benefits {
-  &__wrapper {
-    padding: 70px 0 0;
-  }
-
   &__choose {
     padding: 0 24px;
     text-align: center;
@@ -99,6 +95,10 @@
 
 @media screen and (min-width: $desktop-min-offset) {
   .benefits {
+    &__wrapper {
+      padding: 70px 0 0;
+    }
+
     &__choose {
       max-width: 550px;
       width: 100%;

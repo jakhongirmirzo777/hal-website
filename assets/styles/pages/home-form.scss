@@ -2,14 +2,18 @@
 
 .home-form {
   $screen-height: calc((var(--vh, 1vh) * 100));
+  $title-height: calc(var(--title-height) + 32px);
+  $form-height: var(--form-height);
 
   &__wrapper {
-    min-height: calc(#{$screen-height} - 107px - 70px - 16px);
+    min-height: calc(#{$screen-height} - 107px);
     background-image: url('/truck.webp');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-bottom: calc(70px + 16px + 50px);
+    margin-bottom: calc(
+      #{$form-height} + #{$title-height} + 90px - 100vh + 107px + 100px
+    );
 
     &:before {
       content: '';
@@ -26,8 +30,8 @@
   &__content {
     position: relative;
     z-index: 3;
-    padding: 40px 24px 0;
-    min-height: calc(#{$screen-height} - 107px - 70px - 16px);
+    padding: 90px 24px 0;
+    min-height: calc(#{$screen-height} - 107px);
     width: 100%;
 
     h1 {
@@ -51,7 +55,7 @@
 
   &__form {
     position: absolute;
-    bottom: calc(-50px - 80px);
+    top: calc(90px + #{$title-height});
     left: 24px;
     width: calc(100% - 48px);
   }
@@ -178,16 +182,50 @@
   }
 
   &__rating {
-    display: none;
+    margin-top: 32px;
+    padding: 24px;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    width: 100%;
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+
+      & .trustpilot {
+        width: 92px;
+        height: 23px;
+      }
+
+      & .stars {
+        display: flex;
+
+        img {
+          height: 28px;
+          width: 28px;
+          background-size: cover;
+        }
+
+        img:not(:last-child) {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &--bottom {
+      color: var(--color-black) !important;
+      text-align: center !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      text-transform: uppercase !important;
+    }
   }
 }
 
 @media screen and (min-width: $desktop-min-offset) {
   .home-form {
-    &__rating {
-      display: block;
-    }
-
     &__icon.select {
       position: absolute;
       top: 50%;
@@ -205,10 +243,10 @@
 
     &__form {
       position: relative;
-      bottom: unset;
-      left: unset;
       max-width: 480px;
       width: 100%;
+      top: 0;
+      left: 0;
     }
 
     &__title {
@@ -230,14 +268,6 @@
       background-position: top;
       margin-bottom: 0;
     }
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .home-form {
-    &__content {
-      padding: 200px 160px;
-    }
 
     &__rating {
       margin-top: 32px;
@@ -253,18 +283,22 @@
         align-items: center;
         margin-bottom: 12px;
 
-        &.trustpilot {
+        & .trustpilot {
           width: 105px;
           height: 25px;
         }
 
-        &.stars {
+        & .stars {
           display: flex;
 
           img {
             height: 32px;
             width: 32px;
-            background-size: cover;
+            background-size: contain;
+          }
+
+          img:not(:last-child) {
+            margin-right: 8px;
           }
         }
       }
@@ -276,6 +310,14 @@
         font-weight: 500 !important;
         text-transform: uppercase !important;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .home-form {
+    &__content {
+      padding: 200px 160px;
     }
   }
 }
