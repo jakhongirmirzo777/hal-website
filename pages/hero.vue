@@ -6,6 +6,7 @@
     <HeroReviews />
     <HeroInfo />
     <HeroWorks />
+    <HeroFaq />
   </div>
 </template>
 
@@ -16,10 +17,12 @@ import HeroCTARight from '~/components/pages/HeroCTARight'
 import HeroReviews from '~/components/pages/HeroReviews'
 import HeroInfo from '~/components/pages/HeroInfo'
 import HeroWorks from '~/components/pages/HeroWorks'
+import HeroFaq from '~/components/pages/HeroFaq'
 
 export default {
   name: 'HeroPage',
   components: {
+    HeroFaq,
     HeroWorks,
     HeroInfo,
     HeroReviews,
