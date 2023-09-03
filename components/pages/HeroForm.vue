@@ -22,14 +22,14 @@
               Step 1
             </div>
             <div
-              class="home-form__tab"
+              class="hero-form__tab"
               :class="{ active: step === 2 }"
               @click="step = 2"
             >
               Step 2
             </div>
             <div
-              class="home-form__tab"
+              class="hero-form__tab"
               :class="{ active: step === 3 }"
               @click="step = 3"
             >
