@@ -2,8 +2,12 @@
 
 .faq {
   &__wrapper {
-    padding: 80px 160px;
+    padding: 64px 24px;
     background-color: var(--color-gray-cloud);
+  }
+
+  &__content {
+    margin-bottom: 32px;
   }
 
   &__title {
@@ -72,20 +76,10 @@
   }
 }
 
-//@media screen and (min-width: $desktop-min-offset) {
-//  .faq {
-//    &__wrapper {
-//      padding: 160px 160px 0;
-//    }
-//
-//    &__title {
-//      h2 {
-//        font-size: 48px;
-//      }
-//
-//      p {
-//        font-size: 24px;
-//      }
-//    }
-//  }
-//}
+@media screen and (min-width: $desktop-min-offset) {
+  .faq {
+    &__wrapper {
+      padding: 80px 160px;
+    }
+  }
+}
