@@ -1,19 +1,17 @@
+@import '../globals/vars';
+
 .form {
   &__wrapper {
-    padding: 120px 160px 0;
+    padding: 0;
   }
 
   &__container {
-    height: 430px;
-    padding: 0 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    height: 710px;
+    padding: 70px 24px 0;
     position: relative;
-    background-image: url('/truck-6.webp');
-    background-size: contain;
-    border-radius: 25px;
+    background-image: url('/truck-7.webp');
+    background-size: cover;
+    border-radius: 0;
     background-repeat: no-repeat;
 
     &::before {
@@ -25,27 +23,27 @@
       left: 0;
       background-color: rgba(5, 72, 171, 0.6);
       z-index: 3;
-      border-radius: 25px;
+      border-radius: 0;
     }
   }
 
   &__content {
-    max-width: 500px;
     position: relative;
     z-index: 7;
+    text-align: center;
 
     h2 {
       color: var(--color-white-light);
-      font-size: 64px;
+      font-size: 48px;
       font-weight: 700;
       line-height: 108.023%;
       letter-spacing: -1.28px;
-      margin-bottom: 24px;
+      margin-bottom: 8px;
     }
 
     p {
       color: var(--color-white-light);
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 500;
       line-height: normal;
       margin-bottom: 24px;
@@ -67,10 +65,11 @@
   &__form {
     position: absolute;
     width: 100%;
-    top: -25px;
-    right: 65px;
-    max-width: 350px;
+    bottom: -100px;
+    left: 50%;
+    max-width: 327px;
     z-index: 7;
+    transform: translateX(-50%);
   }
 
   &__form__content {
@@ -192,5 +191,208 @@
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .form {
+    &__wrapper {
+      padding: 120px 160px 0;
+    }
+
+    &__container {
+      height: 430px;
+      padding: 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      background-image: url('/truck-6.webp');
+      background-size: contain;
+      border-radius: 25px;
+      background-repeat: no-repeat;
+
+      &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(5, 72, 171, 0.6);
+        z-index: 3;
+        border-radius: 25px;
+      }
+    }
+
+    &__content {
+      max-width: 500px;
+      position: relative;
+      z-index: 7;
+      text-align: left;
+
+      h2 {
+        color: var(--color-white-light);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 108.023%;
+        letter-spacing: -1.28px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: var(--color-white-light);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 24px;
+      }
+
+      button {
+        padding: 16px 24px;
+        background-color: var(--color-white);
+        color: var(--color-blue);
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 90px;
+        border: none;
+      }
+    }
+  }
+
+  .hero-form {
+    &__form {
+      position: absolute;
+      width: 100%;
+      left: initial;
+      bottom: initial;
+      transform: translateX(0);
+      top: -25px;
+      right: 65px;
+      max-width: 350px;
+      z-index: 7;
+    }
+
+    &__form__content {
+      background-color: var(--color-white);
+      border-radius: 12px 12px 0 0;
+      border: 1px solid var(--color-gray-light);
+      padding: 24px 16px 16px;
+
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--color-black);
+        text-align: left;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-gray);
+        text-align: left;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__tabs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    &__tab {
+      height: 38px;
+      width: calc((100% - 12px) / 3);
+      border-radius: 6px;
+      border: 1px solid var(--color-gray-light);
+      background: var(--color-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-blue);
+
+      &.active {
+        background-color: var(--color-blue);
+        color: var(--color-white-light);
+        box-shadow: 0 4px 6px 0 rgba(18, 62, 141, 0.1);
+        border: none;
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__group {
+      height: 56px;
+      width: 100%;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    &__icon.select {
+      position: absolute;
+      top: 50%;
+      left: 85%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    &__input {
+      font-family: 'Poppins', sans-serif;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: 2px solid var(--color-gray-light);
+      padding-left: 56px;
+      border-radius: 12px;
+      color: var(--color-gray);
+      font-size: 16px;
+      font-weight: 600;
+      background-color: var(--color-white);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      & option {
+        padding-left: 56px;
+      }
+
+      &::placeholder {
+        color: var(--color-gray);
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    &__btn {
+      height: 70px;
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+      background: var(--color-blue);
+      border: none;
+      color: var(--color-white);
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+    }
   }
 }
