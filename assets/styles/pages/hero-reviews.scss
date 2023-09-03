@@ -1,15 +1,17 @@
+@import '../globals/vars';
+
 .reviews {
   &__wrapper {
-    padding: 0 0 120px;
+    padding: 0 0 64px;
   }
 
   &__title {
     max-width: 560px;
     text-align: center;
-    margin: 0 auto 55px;
+    margin: 0 24px 55px;
 
     h2 {
-      font-size: 48px;
+      font-size: 32px;
       font-weight: 700;
       color: var(--color-black);
       margin-bottom: 16px;
@@ -17,19 +19,19 @@
 
     p {
       color: var(--coor-gray);
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 400;
     }
   }
 
   &__slide {
-    padding: 110px 38px 40px;
+    padding: 92px 38px 40px;
     background-color: var(--color-gray-cloud);
     border-radius: 20px;
     position: relative;
-    margin: calc(147px / 2) 16px 0;
+    margin: calc(120px / 2) 8px 0;
     text-align: center;
-    max-height: 400px;
+    max-height: 310px;
     height: 100%;
 
     .bottom {
@@ -37,28 +39,28 @@
     }
 
     .image {
-      width: 147px;
-      height: 147px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       position: absolute;
-      top: calc(-147px / 2);
+      top: calc(-120px / 2);
       left: 50%;
       transform: translateX(-50%);
     }
 
     .name {
       color: var(--color-black-dark);
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
     .title {
       color: #abafc7;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
       margin-bottom: 24px;
     }
@@ -68,7 +70,12 @@
       font-size: 16px;
       font-weight: 600;
       line-height: 25px;
-      margin-bottom: 65px;
+      margin-bottom: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .rate {
@@ -84,5 +91,54 @@
 }
 
 .swiper-slide {
-  width: 21% !important;
+  width: 78% !important;
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .reviews {
+    &__wrapper {
+      padding: 0 0 120px;
+    }
+
+    &__title {
+      margin: 0 auto 55px;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    &__slide {
+      padding: 110px 38px 40px;
+      margin: calc(147px / 2) 16px 0;
+      max-height: 400px;
+
+      .image {
+        width: 147px;
+        height: 147px;
+        top: calc(-147px / 2);
+      }
+
+      .name {
+        font-size: 24px;
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      .comment {
+        font-size: 16px;
+        margin-bottom: 65px;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: 21% !important;
+  }
 }
