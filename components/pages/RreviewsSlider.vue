@@ -15,47 +15,49 @@
         </Swiper>
       </ClientOnly>
     </div>
-    <div class="slider__trustpilot">
-      <div class="slider__trustpilot__top">
-        <img class="trust" src="/trustpilot.png" alt="trustpilot" />
-        <div class="stars">
-          <img class="star" src="/star.png" alt="star" />
-          <img class="star" src="/star.png" alt="star" />
-          <img class="star" src="/star.png" alt="star" />
-          <img class="star" src="/star.png" alt="star" />
-          <img class="star" src="/star-half.png" alt="star" />
+    <div class="slider__data">
+      <div class="slider__trustpilot">
+        <div class="slider__trustpilot__top">
+          <img class="trust" src="/trustpilot.png" alt="trustpilot" />
+          <div class="stars">
+            <img class="star" src="/star.png" alt="star" />
+            <img class="star" src="/star.png" alt="star" />
+            <img class="star" src="/star.png" alt="star" />
+            <img class="star" src="/star.png" alt="star" />
+            <img class="star" src="/star-half.png" alt="star" />
+          </div>
+        </div>
+        <div class="slider__trustpilot__bottom">
+          <h2>Get your free quote now</h2>
+          <p>
+            Have your car shipped to and from any state - safely, fast, with no
+            risk or damage.
+          </p>
+          <button>Read more</button>
         </div>
       </div>
-      <div class="slider__trustpilot__bottom">
-        <h2>Get your free quote now</h2>
-        <p>
-          Have your car shipped to and from any state - safely, fast, with no
-          risk or damage.
-        </p>
-        <button>Read more</button>
+      <div class="slider__slides__controllers">
+        <button
+          class="slider__slides__controllers__btn mr-8"
+          :disabled="isStart"
+          :class="{
+            disabled: isStart,
+          }"
+          @click="onClickPrev"
+        >
+          <VIcon size="24" icon="arrow-left" />
+        </button>
+        <button
+          class="slider__slides__controllers__btn"
+          :disabled="isEnd"
+          :class="{
+            disabled: isEnd,
+          }"
+          @click="onClickNext"
+        >
+          <VIcon size="24" icon="arrow-right" />
+        </button>
       </div>
-    </div>
-    <div class="slider__slides__controllers">
-      <button
-        class="slider__slides__controllers__btn mr-8"
-        :disabled="isStart"
-        :class="{
-          disabled: isStart,
-        }"
-        @click="onClickPrev"
-      >
-        <VIcon size="24" icon="arrow-left" />
-      </button>
-      <button
-        class="slider__slides__controllers__btn"
-        :disabled="isEnd"
-        :class="{
-          disabled: isEnd,
-        }"
-        @click="onClickNext"
-      >
-        <VIcon size="24" icon="arrow-right" />
-      </button>
     </div>
   </div>
 </template>
