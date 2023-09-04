@@ -2,7 +2,7 @@
 
 .reviews {
   &__wrapper {
-    padding: 0 0 64px;
+    padding: 64px 0;
   }
 
   &__title {
@@ -97,7 +97,7 @@
 @media screen and (min-width: $desktop-min-offset) {
   .reviews {
     &__wrapper {
-      padding: 0 0 120px;
+      padding: 120px 0;
     }
 
     &__title {
