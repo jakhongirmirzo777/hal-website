@@ -4,10 +4,14 @@
       class="d-flex justify-between align-center header header__top"
       :class="{ active: isMenuOpen, 'is-fixed': isScrolled }"
     >
-      <div class="d-flex align-center">
+      <nuxt-link
+        to="/"
+        class="d-flex align-center"
+        style="text-decoration: none"
+      >
         <VIcon class="mr-8" icon="logo" size="35" />
         <span class="header__logo__text">Hyperion</span>
-      </div>
+      </nuxt-link>
       <div
         class="d-flex flex-column justify-center align-center header__menu"
         @click="setIsMenuOpen"

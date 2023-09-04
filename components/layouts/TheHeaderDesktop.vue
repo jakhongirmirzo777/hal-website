@@ -1,10 +1,14 @@
 <template>
   <div class="header__desktop__wrapper">
     <div class="header__desktop__left">
-      <div class="header__desktop__logo">
+      <nuxt-link
+        to="/"
+        class="header__desktop__logo"
+        style="text-decoration: none"
+      >
         <VIcon class="mr-8" icon="logo" size="42" />
         <span class="header__desktop__logo__text">Hyperion</span>
-      </div>
+      </nuxt-link>
       <ul class="header__desktop__menus">
         <li
           v-for="(menu, index) in menus"
