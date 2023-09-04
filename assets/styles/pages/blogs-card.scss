@@ -232,7 +232,7 @@
 @media screen and (min-width: $desktop-min-offset) {
   .blogs {
     &__wrapper {
-      padding: 64px 160px;
+      padding: 64px 160px 0;
     }
 
     &__box.desktop {
