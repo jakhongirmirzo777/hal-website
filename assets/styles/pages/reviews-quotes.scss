@@ -1,3 +1,5 @@
+@import '../globals/vars';
+
 .quotes {
   &__wrapper {
     background-color: var(--color-gray-cloud);
@@ -61,6 +63,35 @@
 
       &.disabled {
         border: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .quotes {
+    &__wrapper {
+      padding: 80px 160px;
+    }
+
+    &__slide {
+      svg {
+        width: 64px !important;
+        height: 50px !important;
+        margin-bottom: 48px;
+      }
+
+      .comment {
+        font-size: 30px;
+        margin-bottom: 32px;
+      }
+
+      .name {
+        font-size: 24px;
+      }
+
+      .title {
+        font-size: 16px;
       }
     }
   }
