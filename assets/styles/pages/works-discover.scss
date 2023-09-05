@@ -1,0 +1,135 @@
+@import '../globals/vars';
+
+.works {
+  $title-height: calc(var(--title-height));
+  $container-height: calc(var(--container-height));
+
+  &__wrapper {
+    min-height: 780px;
+    background-image: url('/truck-8.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: calc(
+      #{$container-height} + #{$title-height} + 70px + 32px - 780px
+    );
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background: rgba(5, 72, 171, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+    min-height: 780px;
+    padding: 70px 43px 0;
+  }
+
+  &__title {
+    color: var(--color-white-light);
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(#{$title-height} + 70px + 32px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__map {
+    width: 100% !important;
+    height: 190px !important;
+  }
+
+  &__rating {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    form {
+      max-width: 100% !important;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .works {
+    &__wrapper {
+      padding: 60px 160px;
+      background-image: url('/truck-9.webp');
+      margin-bottom: 0;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 64px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 24px;
+        max-width: 500px;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__map {
+      width: 662px !important;
+      height: 404px !important;
+    }
+
+    &__rating {
+      width: 58%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__form {
+      width: 37%;
+
+      form {
+        width: 100% !important;
+      }
+    }
+  }
+}

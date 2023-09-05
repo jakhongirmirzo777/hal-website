@@ -1,0 +1,41 @@
+.home-form__rating {
+  padding: 24px;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  max-width: 385px;
+  width: 100%;
+
+  &--top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    & .trustpilot {
+      width: 105px;
+      height: 25px;
+    }
+
+    & .stars {
+      display: flex;
+
+      img {
+        height: 32px;
+        width: 32px;
+        background-size: contain;
+      }
+
+      img:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &--bottom {
+    color: var(--color-black) !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+  }
+}

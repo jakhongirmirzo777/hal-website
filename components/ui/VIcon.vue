@@ -19,6 +19,14 @@ export default {
       type: [Number, String],
       default: 24,
     },
+    height: {
+      type: [Number, String],
+      default: '',
+    },
+    width: {
+      type: [Number, String],
+      default: '',
+    },
   },
   computed: {
     importedIcon() {
@@ -26,8 +34,8 @@ export default {
     },
     styles() {
       return {
-        width: this.size + 'px',
-        height: this.size + 'px',
+        width: this.width ? this.width + 'px' : this.size + 'px',
+        height: this.height ? this.height + 'px' : this.size + 'px',
       }
     },
   },
