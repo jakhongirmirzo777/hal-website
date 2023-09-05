@@ -1,0 +1,78 @@
+@import '../globals/vars';
+
+.business {
+  &__wrapper {
+    min-height: 580px;
+    background-image: url('/car-10.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(12, 12, 12);
+    padding: 56px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin: 0 auto;
+      padding: 16px 24px;
+      border-radius: 90px;
+      background: #fcfcfd;
+      border: none;
+      color: var(--color-black);
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    color: #fcfcfd;
+    text-align: center;
+    margin-bottom: 24px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .business {
+    &__wrapper {
+      min-height: 615px;
+      background-image: url('/car-11.webp');
+      background-size: contain;
+      background-position: right;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 150px;
+
+      button {
+        margin: 0 auto 0 0;
+      }
+    }
+
+    &__title {
+      text-align: left;
+      max-width: 420px;
+      margin-bottom: 24px;
+
+      h2 {
+        font-size: 64px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
