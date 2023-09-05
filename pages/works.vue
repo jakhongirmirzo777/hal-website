@@ -3,6 +3,7 @@
     <WorksDiscover />
     <WorksSteps />
     <WorksStepOne />
+    <HeroForm style="margin-bottom: 150px" />
   </div>
 </template>
 
@@ -10,8 +11,9 @@
 import WorksDiscover from '~/components/pages/WorksDiscover'
 import WorksSteps from '~/components/pages/WorksSteps'
 import WorksStepOne from '~/components/pages/WorksStepOne'
+import HeroForm from '~/components/pages/HeroForm'
 export default {
   name: 'WorksPage',
-  components: { WorksStepOne, WorksSteps, WorksDiscover },
+  components: { HeroForm, WorksStepOne, WorksSteps, WorksDiscover },
 }
 </script>
