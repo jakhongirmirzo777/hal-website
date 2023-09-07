@@ -1,0 +1,123 @@
+@import '../globals/vars';
+
+.reasons-header {
+  &__wrapper {
+    background-image: url('/truck-11.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-color: rgba(5, 72, 171, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+  }
+
+  &__container {
+    min-height: 775px;
+    position: relative;
+    z-index: 5;
+    padding: 70px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--color-white-light);
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 108.023%;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+  }
+
+  &__trustpilot {
+    padding: 16px !important;
+
+    .trustpilot {
+      width: 90px !important;
+    }
+
+    .stars {
+      img {
+        height: 27px !important;
+        width: 27px !important;
+      }
+
+      img:not(:last-child) {
+        margin-right: 7px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .reasons-header {
+    &__wrapper {
+      background-image: url('/truck-10.webp');
+
+      &::before {
+        background-color: rgba(5, 72, 171, 0.8);
+      }
+
+      .desktop {
+        display: block;
+      }
+
+      .mobile {
+        display: none;
+      }
+    }
+
+    &__container {
+      padding: 124px 160px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__title {
+      text-align: left;
+      max-width: 560px;
+      margin-bottom: 32px;
+
+      h1 {
+        font-size: 64px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
