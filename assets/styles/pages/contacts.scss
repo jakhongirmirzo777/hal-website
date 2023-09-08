@@ -1,0 +1,11 @@
+@import '../globals/vars';
+
+.contacts__form {
+  padding: 60px 0 32px;
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .contacts__form {
+    padding: 120px 0 60px;
+  }
+}

@@ -1,0 +1,20 @@
+@import '../globals/vars';
+
+.contacts {
+  &__map {
+    .GMap__Wrapper {
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .contacts {
+    &__map {
+      padding: 60px 0 120px;
+      .GMap__Wrapper {
+        height: 500px;
+      }
+    }
+  }
+}

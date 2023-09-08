@@ -1,0 +1,68 @@
+@import '../globals/vars';
+
+.contacts {
+  &__wrapper {
+    background-image: url('/truck-8.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background: rgba(5, 72, 171, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+    }
+  }
+
+  &__container {
+    min-height: 556px;
+    padding: 70px 24px;
+    text-align: center;
+    color: var(--color-white-light);
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 108.023%;
+      letter-spacing: -0.96px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-min-offset) {
+  .contacts {
+    &__wrapper {
+      background-image: url('/truck-12.webp');
+      background-position: center;
+    }
+
+    &__container {
+      min-height: 540px;
+      padding: 120px 160px;
+
+      h1 {
+        font-size: 64px;
+        margin-bottom: 26px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
