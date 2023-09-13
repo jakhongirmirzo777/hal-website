@@ -9,7 +9,13 @@
       </div>
       <div ref="container" class="works__body">
         <div class="works__rating">
-          <VIcon class="works__map" icon="map-2" height="190" width="312" />
+          <VIcon
+            id="map-2"
+            class="works__map"
+            icon="map-2"
+            height="190"
+            width="312"
+          />
           <HomeFormRating />
         </div>
         <div class="works__form">
@@ -17,6 +23,7 @@
         </div>
       </div>
     </div>
+    <div id="tooltip-map-2"></div>
   </div>
 </template>
 
@@ -24,11 +31,22 @@
 import HomeFormRating from '~/components/pages/HomeFormRating'
 import FillForm from '~/components/pages/FillForm'
 import VIcon from '~/components/ui/VIcon'
+import states from '~/utils/states'
 export default {
   name: 'WorksDiscover',
   components: { VIcon, FillForm, HomeFormRating },
   mounted() {
     this.addScreenSize()
+    setTimeout(() => {
+      const mapBlack = document.getElementById('map-2')
+      mapBlack.addEventListener('mouseover', this.placeTooltip)
+      mapBlack.addEventListener('mouseleave', this.removeTooltip)
+    }, 1000)
+  },
+  destroyed() {
+    const mapBlack = document.getElementById('map-2')
+    mapBlack.removeEventListener('mouseover', this.placeTooltip)
+    mapBlack.removeEventListener('mouseleave', this.removeTooltip)
   },
   methods: {
     addScreenSize() {
@@ -45,10 +63,26 @@ export default {
         `${containerVh}px`
       )
     },
+    placeTooltip(e) {
+      const text = e.target.dataset.tooltip
+      const tooltip = document.getElementById('tooltip-map-2')
+      if (text) {
+        tooltip.textContent = states[text]
+        tooltip.style.left = e.clientX + 20 + 'px'
+        tooltip.style.top = e.clientY + 20 + 'px'
+        tooltip.style.opacity = '1'
+      } else {
+        tooltip.style.opacity = '0'
+      }
+    },
+    removeTooltip() {
+      const tooltip = document.getElementById('tooltip-map-2')
+      tooltip.style.opacity = '0'
+    },
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/styles/pages/works-discover';
 </style>

@@ -37,8 +37,8 @@ export default {
       const tooltip = document.getElementById('tooltip-map-black')
       if (text) {
         tooltip.textContent = states[text]
-        tooltip.style.left = e.clientX + 'px'
-        tooltip.style.top = e.clientY - 20 + 'px'
+        tooltip.style.left = e.clientX + 20 + 'px'
+        tooltip.style.top = e.clientY + 20 + 'px'
         tooltip.style.opacity = '1'
       } else {
         tooltip.style.opacity = '0'

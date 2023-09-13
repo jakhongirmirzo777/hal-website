@@ -5,14 +5,14 @@
   $container-height: calc(var(--container-height));
 
   &__wrapper {
-    min-height: 780px;
+    min-height: 850px;
     background-image: url('/truck-8.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     margin-bottom: calc(
-      #{$container-height} + #{$title-height} + 70px + 32px - 780px
+      #{$container-height} + #{$title-height} + 70px + 32px - 850px
     );
 
     &:before {
@@ -32,7 +32,7 @@
     z-index: 6;
     height: 100%;
     width: 100%;
-    min-height: 780px;
+    min-height: 850px;
     padding: 70px 43px 0;
   }
 
@@ -62,6 +62,18 @@
   &__map {
     width: 100% !important;
     height: 190px !important;
+    margin-bottom: 50px;
+
+    path {
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.01) translateY(-10px);
+        fill: rgba(225, 225, 225, 0.95);
+      }
+    }
   }
 
   &__rating {
@@ -132,4 +144,14 @@
       }
     }
   }
+}
+
+#tooltip-map-2 {
+  background-color: var(--color-white);
+  border: 1px solid #024e90;
+  border-radius: 10px 30px 30px 30px;
+  padding: 5px 10px;
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
 }

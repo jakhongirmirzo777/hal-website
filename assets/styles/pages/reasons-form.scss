@@ -10,6 +10,17 @@
 
   &__icon {
     margin-bottom: 48px;
+
+    path {
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.01) translateY(-10px);
+        fill: #2892ef;
+      }
+    }
   }
 
   &__form {
@@ -37,4 +48,14 @@
       width: 100%;
     }
   }
+}
+
+#tooltip-map-blue {
+  background-color: var(--color-white);
+  border: 1px solid #024e90;
+  border-radius: 10px 30px 30px 30px;
+  padding: 5px 10px;
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
 }
