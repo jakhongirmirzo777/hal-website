@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomeForm />
+    <HomeForm id="home-form" />
     <HomeBenefits />
     <HomeReviews />
     <HomeProcess />

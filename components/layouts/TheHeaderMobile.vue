@@ -21,7 +21,7 @@
       </div>
     </div>
     <TheForm :is-scrolled="isScrolled" />
-    <div v-if="isMenuOpen" style="height: 107px" />
+    <div v-if="isMenuOpen" style="height: 71px" />
     <transition name="fade">
       <div v-if="isMenuOpen" class="header__menu__opened">
         <ul class="header__menu__list">
@@ -95,10 +95,12 @@ export default {
       isMenuOpen: false,
       isScrolled: false,
       navs,
+      homeHeaderHeight: 0,
     }
   },
   mounted() {
     document.addEventListener('scroll', this.toggleHeaderFixed)
+    this.homeHeaderHeight = document.getElementById('home-form').clientHeight
   },
   beforeDestroy() {
     document.removeEventListener('scroll', this.toggleHeaderFixed)
@@ -106,7 +108,7 @@ export default {
   methods: {
     toggleHeaderFixed() {
       const { scrollY } = window
-      this.isScrolled = scrollY > 107
+      this.isScrolled = scrollY > this.homeHeaderHeight + 71
     },
     setIsMenuOpen() {
       this.isMenuOpen = !this.isMenuOpen

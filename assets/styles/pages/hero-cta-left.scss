@@ -10,10 +10,10 @@
     flex-direction: column;
     background-color: var(--color-gray-cloud);
     margin-top: calc(
-      #{$screen-height} - #{$form-height} - #{$title-height} - 90px - 32px - 107px
+      #{$screen-height} - #{$form-height} - #{$title-height} - 90px - 32px - 71px
     );
     padding: calc(
-        #{$form-height} + #{$title-height} + 90px + 32px - #{$screen-height} + 107px +
+        #{$form-height} + #{$title-height} + 90px + 32px - #{$screen-height} + 71px +
           80px
       )
       24px 80px;

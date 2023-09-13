@@ -2,7 +2,7 @@
 
 .header {
   $screen-height: calc((var(--vh, 1vh) * 100));
-  padding: 48px 24px 24px;
+  padding: 18px 24px;
 
   &__logo__text {
     color: var(--color-black);
@@ -57,7 +57,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 107px;
+    height: 71px;
     width: 100%;
     background-color: var(--color-white);
     z-index: 8;
@@ -67,7 +67,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 107px;
+    height: 71px;
     width: 100%;
     background-color: var(--color-white);
     z-index: 8;
@@ -80,7 +80,7 @@
       width: 100%;
       position: fixed;
       left: 0;
-      top: 107px;
+      top: 71px;
       z-index: 8;
       background-color: var(--color-white);
       padding: 56px 0 160px;
@@ -127,6 +127,14 @@
 }
 
 .header__desktop {
+  &__phone {
+    margin-right: 10px;
+    background-color: var(--color-blue);
+    color: var(--color-white) !important;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
   &__wrapper {
     padding: 20px 80px;
     display: flex;

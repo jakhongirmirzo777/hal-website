@@ -69,6 +69,7 @@
       </ul>
     </div>
     <span class="header__desktop__right">
+      <a class="header__desktop__phone" :href="`tel:${phoneLink}`">Call us</a>
       <nuxt-link to="/support"> Support </nuxt-link>
     </span>
   </div>
@@ -155,6 +156,11 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    phoneLink() {
+      return process.env.SUPPORT_PHONE
+    },
   },
   watch: {
     activeMenu(val) {

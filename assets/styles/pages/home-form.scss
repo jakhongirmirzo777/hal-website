@@ -6,13 +6,13 @@
   $form-height: var(--form-height);
 
   &__wrapper {
-    min-height: calc(#{$screen-height} - 107px);
+    min-height: calc(#{$screen-height} - 71px);
     background-image: url('/truck.webp');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     margin-bottom: calc(
-      #{$form-height} + #{$title-height} + 90px + 32px - #{$screen-height} + 107px
+      #{$form-height} + #{$title-height} + 90px + 32px - #{$screen-height} + 71px
     );
 
     &:before {
@@ -31,7 +31,7 @@
     position: relative;
     z-index: 3;
     padding: 90px 24px 0;
-    min-height: calc(#{$screen-height} - 107px);
+    min-height: calc(#{$screen-height} - 71px);
     width: 100%;
 
     h1 {

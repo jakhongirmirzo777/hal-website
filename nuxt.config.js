@@ -67,4 +67,12 @@ export default {
   build: {
     transpile: ['vee-validate/dist/rules'],
   },
+
+  env: {
+    SUPPORT_PHONE: process.env.SUPPORT_PHONE,
+  },
+
+  publicRuntimeConfig: {
+    SUPPORT_PHONE: process.env.SUPPORT_PHONE,
+  },
 }
