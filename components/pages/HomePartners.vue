@@ -37,8 +37,8 @@ export default {
         slidesPerView: 'auto',
         loop: true,
         autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: true,
         },
       },
       swiperData: data,

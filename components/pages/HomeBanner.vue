@@ -8,7 +8,7 @@
         in React Native.
       </p>
       <div class="banner__input">
-        <input type="text" />
+        <input placeholder="Your phone number" type="text" />
         <span class="banner__input__icon">
           <VIcon icon="arrow-right-white" />
         </span>
