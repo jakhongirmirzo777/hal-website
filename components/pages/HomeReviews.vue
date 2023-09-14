@@ -16,11 +16,13 @@
           <SwiperSlide v-for="slide in swiperData" :key="slide.id">
             <div class="reviews__slide">
               <div class="reviews__slide__header">
-                <img :src="slide.image" alt="photo" />
-                <p>
-                  {{ slide.first_name }} <br />
-                  {{ slide.last_name }}
-                </p>
+                <div class="d-flex align-center">
+                  <img class="mr-5" :src="slide.image" alt="photo" />
+                  <p>
+                    {{ slide.first_name }} <br />
+                    {{ slide.last_name }}
+                  </p>
+                </div>
                 <div class="reviews__slide__stars">
                   <VIcon
                     v-for="star in slide.rating"

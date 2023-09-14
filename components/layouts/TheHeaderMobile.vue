@@ -100,7 +100,8 @@ export default {
   },
   mounted() {
     document.addEventListener('scroll', this.toggleHeaderFixed)
-    this.homeHeaderHeight = document.getElementById('home-form').clientHeight
+    this.homeHeaderHeight =
+      document.getElementById('home-form')?.clientHeight || 0
   },
   beforeDestroy() {
     document.removeEventListener('scroll', this.toggleHeaderFixed)

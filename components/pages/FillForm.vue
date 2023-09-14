@@ -1,8 +1,9 @@
 <template>
   <form ref="form" class="fill-form__form" @submit.prevent="">
     <div class="fill-form__form__content">
-      <h4>Fill out the form</h4>
-      <p>Fill out the form now and get a discount!</p>
+      <h4 class="mb-16">
+        Get an instant quote or call us now at (518)855-6577
+      </h4>
       <div class="fill-form__tabs">
         <div
           class="fill-form__tab"

@@ -1,44 +1,43 @@
 const data = [
   {
     id: 1,
-    title: 'ai Broker',
+    title: 'AI BROKER',
     description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+      'Providing Real-Time Market Pricing with Prices That Never Change',
     icon: 'user',
   },
   {
     id: 2,
     title: 'Insurance coverage',
     description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+      'Comprehensive Bumper-to-Bumper Insurance Coverage up to $250,000.',
     icon: 'insurance',
   },
   {
     id: 3,
     title: '24/7 at your service',
     description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+      'Available 24/7 with a Team of Professionals Eager to Address Your Inquiries',
     icon: 'service',
   },
   {
     id: 4,
     title: 'Dedicated advisors',
     description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+      'by Your Side, Providing Coverage Throughout Your Transportation Journey.',
     icon: 'smile',
   },
   {
     id: 5,
     title: 'Shipment tracking',
     description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+      'Stay Informed with Advanced Shipment Tracking and Live Snapshots',
     icon: 'tracking',
   },
   {
     id: 6,
     title: 'Zero upfront payment',
-    description:
-      'Stacks is a production-ready library of stackable content blocks built in React Native',
+    description: 'No Upfront Payment, Just Transparent Pricing.',
     icon: 'dollar',
   },
 ]

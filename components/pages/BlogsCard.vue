@@ -45,8 +45,9 @@
       <div class="col-4">
         <form ref="form" class="blogs-form__form" @submit.prevent="">
           <div class="blogs-form__form__content">
-            <h4>Fill out the form</h4>
-            <p>Fill out the form now and get a discount!</p>
+            <h4 class="mb-16">
+              Get an instant quote or call us now at (518)855-6577
+            </h4>
             <div class="blogs-form__tabs">
               <div
                 class="blogs-form__tab"

@@ -1,8 +1,7 @@
 <template>
   <div class="blog__wrapper">
     <div class="blog__title">
-      <h2>Blog</h2>
-      <p>Keep calm & travel on</p>
+      <h2>Latest stories for you</h2>
     </div>
     <div class="blog__content">
       <div v-for="item in 3" :key="item" class="blog__item">

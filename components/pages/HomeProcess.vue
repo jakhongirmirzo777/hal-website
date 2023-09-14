@@ -2,7 +2,7 @@
   <div class="process__wrapper">
     <div class="process__title">
       <h2>How it work</h2>
-      <p>Keep calm & travel on</p>
+      <p>Our efficient system operates in three streamlined steps</p>
     </div>
     <div class="process__box__wrapper">
       <div v-for="item in data" :key="item.id" class="process__box">

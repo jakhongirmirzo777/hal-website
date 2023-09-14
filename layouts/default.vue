@@ -2,7 +2,7 @@
   <div>
     <TheHeaderDesktop />
     <TheHeaderMobile />
-    <NuxtChild />
+    <Nuxt />
     <TheFooterDesktop />
     <TheFooterMobile />
   </div>

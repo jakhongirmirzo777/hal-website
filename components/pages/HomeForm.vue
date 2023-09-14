@@ -3,11 +3,8 @@
     <div class="home-form__content">
       <div ref="title" class="home-form__title">
         <div>
-          <h1>Get your free quote now</h1>
-          <p>
-            Have your car shipped to and from any state - safely, fast, with no
-            risk or damage.
-          </p>
+          <h1>Where Excellence in Transportation Begins</h1>
+          <p>From Quote to Delivery, We've Got You Covered.</p>
         </div>
         <div class="home-form__rating">
           <div class="home-form__rating--top">
@@ -27,8 +24,9 @@
       </div>
       <form ref="form" class="home-form__form" @submit.prevent="">
         <div class="home-form__form__content">
-          <h4>Fill out the form</h4>
-          <p>Fill out the form now and get a discount!</p>
+          <h4 class="mb-16">
+            Get an instant quote or call us now at (518)855-6577
+          </h4>
           <div class="home-form__tabs">
             <div
               class="home-form__tab"

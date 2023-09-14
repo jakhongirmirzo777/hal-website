@@ -1,8 +1,11 @@
 <template>
   <div class="offer__wrapper">
     <div class="offer__title">
-      <h2>Whats we offer</h2>
-      <p>Keep calm & travel on</p>
+      <h2>What we offer</h2>
+      <p>
+        At Hyperion Auto Logistics, we offer a broad spectrum of solutions
+        tailored to your specific needs
+      </p>
     </div>
     <div class="offer__slides">
       <ClientOnly>

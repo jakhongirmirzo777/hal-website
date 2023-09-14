@@ -1,10 +1,10 @@
 <template>
   <div class="benefits__wrapper">
     <div class="benefits__choose">
-      <h2>Why choose us?</h2>
+      <h2>What makes us the ideal choice?</h2>
       <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
+        Transport your vehicle to and from any state - securely and quickly,
+        with peace of mind.
       </p>
     </div>
     <div class="benefits__slides">

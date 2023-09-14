@@ -2,7 +2,10 @@
   <div class="partners__wrapper">
     <div class="partners__title">
       <h2>Our partners</h2>
-      <p>Keep calm & travel on</p>
+      <p>
+        Trust in our expertise and commitment to deliver exceptional service
+        every time
+      </p>
     </div>
     <div class="partners__slides">
       <ClientOnly>
