@@ -1,12 +1,18 @@
 <template>
   <div>
-    <WorksDiscover />
+    <WorksDiscover
+      title="Fill out the form and find out the cost"
+      description="Here we will write catchy sub-heading, it will take a long time..."
+    />
     <ReasonsPrices />
     <WorksStepOne />
     <HeroReviews />
     <HomeFaq style="margin-top: -160px" />
     <HeroForm style="margin-bottom: 150px" />
-    <HomeBlog />
+    <HomeBlog
+      title="Blog"
+      description="Have your car shipped to and from any state - safely, fast, with no risk or damage."
+    />
   </div>
 </template>
 

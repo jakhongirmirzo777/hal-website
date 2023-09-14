@@ -8,51 +8,27 @@
       </p>
     </div>
     <div class="faq__content">
-      <VCollapse>
-        <template #top="{ toggle }">
-          <div class="faq__collapse__top">
-            <p>Word</p>
-            <VIcon
-              class="cursor-pointer"
-              icon="chevron-down"
-              size="34"
-              @click="toggle"
-            />
-          </div>
-        </template>
-        <template #bottom>
-          <p class="faq__collapse__bottom">
-            Консалтинг (консультирование) — деятельность по консультированию
-            руководителей, управленцев по широкому кругу вопросов в сфере
-            финансовой, коммерческой, юридической, технологической, технической,
-            экспертной деятельностей. Цель консалтинга — помочь системе
-            управления (менеджменту) в достижении заявленных целей.
-          </p>
-        </template>
-      </VCollapse>
-      <VLine class="my-24" color="#E6E7EB" />
-      <VCollapse>
-        <template #top="{ toggle }">
-          <div class="faq__collapse__top">
-            <p>MegaWork</p>
-            <VIcon
-              class="cursor-pointer"
-              icon="chevron-down"
-              size="34"
-              @click="toggle"
-            />
-          </div>
-        </template>
-        <template #bottom>
-          <p class="faq__collapse__bottom">
-            Консалтинг (консультирование) — деятельность по консультированию
-            руководителей, управленцев по широкому кругу вопросов в сфере
-            финансовой, коммерческой, юридической, технологической, технической,
-            экспертной деятельностей. Цель консалтинга — помочь системе
-            управления (менеджменту) в достижении заявленных целей.
-          </p>
-        </template>
-      </VCollapse>
+      <div v-for="item in data" :key="item.id">
+        <VCollapse>
+          <template #top="{ toggle }">
+            <div class="faq__collapse__top">
+              <p>{{ item.title }}</p>
+              <VIcon
+                class="cursor-pointer"
+                icon="chevron-down"
+                size="34"
+                @click="toggle"
+              />
+            </div>
+          </template>
+          <template #bottom>
+            <p class="faq__collapse__bottom">
+              {{ item.content }}
+            </p>
+          </template>
+        </VCollapse>
+        <VLine v-if="item.id !== data.length" class="my-24" color="#E6E7EB" />
+      </div>
     </div>
     <div class="faq__footer">
       <button>More FAQs</button>
@@ -65,9 +41,16 @@
 import VCollapse from '~/components/ui/VCollapse'
 import VIcon from '~/components/ui/VIcon'
 import VLine from '~/components/ui/VLine'
+import data from '~/data/faq-page'
+
 export default {
   name: 'HeroFaq',
   components: { VLine, VIcon, VCollapse },
+  data() {
+    return {
+      data,
+    }
+  },
 }
 </script>
 

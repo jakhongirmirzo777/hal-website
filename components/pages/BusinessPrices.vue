@@ -1,7 +1,7 @@
 <template>
   <div class="prices__wrapper">
     <div class="prices__title">
-      <h2>Full transparency in prices</h2>
+      <h2>Get your free quote</h2>
       <p>
         Have your car shipped to and from any state - safely, fast, with no risk
         or damage.

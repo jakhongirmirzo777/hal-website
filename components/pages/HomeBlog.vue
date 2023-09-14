@@ -1,7 +1,8 @@
 <template>
   <div class="blog__wrapper">
     <div class="blog__title">
-      <h2>Latest stories for you</h2>
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
     </div>
     <div class="blog__content">
       <div v-for="item in 3" :key="item" class="blog__item">
@@ -24,6 +25,16 @@
 <script>
 export default {
   name: 'HomeBlog',
+  props: {
+    title: {
+      type: String,
+      default: 'Latest stories for you',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+  },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="contacts__wrapper">
     <div class="contacts__container">
-      <h1>Feel free to contact us!</h1>
+      <h1>Feel free to contact us! Call us now</h1>
       <p>
         At Hyperion you always come first. That’s our pledge and our promise.
         Our team of car shipping experts is available around the clock to assist

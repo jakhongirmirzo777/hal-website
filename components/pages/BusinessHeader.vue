@@ -1,10 +1,10 @@
 <template>
   <div class="business__wrapper">
     <div class="business__title">
-      <h1>Get your free quote now</h1>
+      <h1>Start Your Luxury Journey</h1>
       <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
+        Experience a seamless, premium vehicle transportation service designed
+        with your needs in mind
       </p>
     </div>
     <button>Start your search</button>

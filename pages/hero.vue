@@ -1,6 +1,9 @@
 <template>
   <div>
-    <HomeForm />
+    <HomeForm
+      title="Get your free quote now"
+      description="Have your car shipped to and from any state - safely, fast, with no risk or damage."
+    />
     <HeroCTALeft />
     <HeroCTARight />
     <HeroReviews />
@@ -8,7 +11,11 @@
     <HeroWorks />
     <HeroFaq />
     <HeroForm />
-    <HomeBlog style="margin-top: 100px" />
+    <HomeBlog
+      title="Related stories for you"
+      description="Have your car shipped to and from any state - safely, fast, with no risk or damage."
+      style="margin-top: 100px"
+    />
   </div>
 </template>
 

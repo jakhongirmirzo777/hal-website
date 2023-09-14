@@ -2,9 +2,9 @@
   <div class="works__wrapper">
     <div class="works__container">
       <div ref="title" class="works__title">
-        <h1>Discover how it works!</h1>
+        <h1>{{ title }}</h1>
         <p>
-          Here we will write catchy sub-heading, it will take a long time...
+          {{ description }}
         </p>
       </div>
       <div ref="container" class="works__body">
@@ -35,6 +35,17 @@ import states from '~/utils/states'
 export default {
   name: 'WorksDiscover',
   components: { VIcon, FillForm, HomeFormRating },
+  props: {
+    title: {
+      type: String,
+      default: 'Discover how it works!',
+    },
+    description: {
+      type: String,
+      default:
+        "We've simplified the auto transportation process into three easy steps",
+    },
+  },
   mounted() {
     this.addScreenSize()
     setTimeout(() => {
@@ -83,6 +94,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/styles/pages/works-discover';
 </style>

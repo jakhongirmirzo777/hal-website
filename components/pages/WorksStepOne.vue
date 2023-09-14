@@ -87,8 +87,10 @@
           Our car hauling service delivers your vehicle to its destination.
         </h3>
         <p>
-          Our expert Hyperion auto transport coordinators are starting by to
-          book your spot with one of our experienced, safe vehicle transporters.
+          Hyperion Auto Logistics is a vehicle transportation firm designed with
+          you in mind. At any time, you have the freedom to connect with your
+          car transporter for any information related to your vehicle's
+          shipment.
         </p>
         <div class="step__item">
           <div class="icon">

@@ -4,7 +4,7 @@
       <GMap
         ref="gMap"
         language="en"
-        :center="{ lat: 41.311081, lng: 69.240562 }"
+        :center="{ lat: 40.73061, lng: -73.935242 }"
         :options="{
           fullscreenControl: false,
           styles: {

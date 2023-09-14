@@ -3,8 +3,8 @@
     <div class="home-form__content">
       <div ref="title" class="home-form__title">
         <div>
-          <h1>Where Excellence in Transportation Begins</h1>
-          <p>From Quote to Delivery, We've Got You Covered.</p>
+          <h1>{{ title }}</h1>
+          <p>{{ description }}</p>
         </div>
         <div class="home-form__rating">
           <div class="home-form__rating--top">
@@ -178,6 +178,16 @@ import VIcon from '~/components/ui/VIcon'
 export default {
   name: 'HomeForm',
   components: { VIcon },
+  props: {
+    title: {
+      type: String,
+      default: 'Where Excellence in Transportation Begins',
+    },
+    description: {
+      type: String,
+      default: "From Quote to Delivery, We've Got You Covered.",
+    },
+  },
   data() {
     return {
       step: 1,

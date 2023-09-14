@@ -1,10 +1,11 @@
 <template>
   <div class="reviews__wrapper">
     <div class="reviews__title">
-      <h2>What they say about us</h2>
+      <h2>What Our Customers Are Saying About Us</h2>
       <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
+        Choose Hyperion Auto Logistics for a seamless, worry-free, and luxurious
+        vehicle transportation experience. Start your luxury journey with us
+        today!
       </p>
     </div>
     <div class="reviews__slides">

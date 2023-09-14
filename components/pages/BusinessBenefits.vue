@@ -1,10 +1,9 @@
 <template>
   <div class="benefits__wrapper">
     <div class="benefits__title">
-      <h2>Full transparency in prices</h2>
+      <h2>Honest pricing for premium services</h2>
       <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
+        Experience the epitome of luxury with our transparent pricing structure
       </p>
     </div>
     <div class="benefits__cards">
@@ -26,10 +25,11 @@
           <div class="icon">
             <VIcon size="45" icon="date-black" />
           </div>
-          <h3>Get a Quote and Secure Your Contract</h3>
+          <h3>Convenient Car Pickup Service From Any Location</h3>
           <p>
-            Our seamless process allows you to receive an accurate service quote
-            and sign the contract online. Minimal effort, maximum transparency.
+            No matter where your car is located, our team is ready to pick it
+            up. We provide a hassle-free car pickup service, saving your time
+            and effort.
           </p>
         </div>
         <div class="benefits__line" />
@@ -39,10 +39,11 @@
           <div class="icon">
             <VIcon size="45" icon="truck-black" />
           </div>
-          <h3>Get a Quote and Secure Your Contract</h3>
+          <h3>Safe and Timely Car Delivery</h3>
           <p>
-            Our seamless process allows you to receive an accurate service quote
-            and sign the contract online. Minimal effort, maximum transparency.
+            Your car is delivered to you securely and on time. We pay special
+            attention to safety during transportation, ensuring your car reaches
+            you in pristine condition.
           </p>
         </div>
         <div class="benefits__line" />

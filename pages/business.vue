@@ -9,7 +9,10 @@
       <HeroReviews />
     </div>
     <HomeFaq />
-    <HomeBlog />
+    <HomeBlog
+      title="Blog"
+      description="Have your car shipped to and from any state - safely, fast, with no risk or damage."
+    />
   </div>
 </template>
 

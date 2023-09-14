@@ -4,7 +4,10 @@
       <div class="reasons-header__top">
         <div class="reasons-header__title">
           <h1>Reasons why you should choice us!</h1>
-          <p>Here we will write catchy sub-heading which is not found yet(</p>
+          <p>
+            Embark on a journey with Hyperion Auto Logistics, where your needs
+            and satisfaction take center stage.
+          </p>
         </div>
         <HomeFormRating class="desktop" />
       </div>

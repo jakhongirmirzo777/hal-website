@@ -5,8 +5,8 @@
     <div class="transparency__content">
       <h2>Full transparency in prices</h2>
       <p>
-        Have your car shipped to and from any state - safely, fast, with no risk
-        or damage.
+        Reflecting our commitment to honesty and integrity in our premium
+        services.
       </p>
       <button>Start your search</button>
     </div>
