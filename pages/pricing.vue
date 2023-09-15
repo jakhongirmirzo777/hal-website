@@ -1,13 +1,10 @@
 <template>
   <div>
-    <WorksDiscover
-      title="Fill out the form and find out the cost"
-      description="Here we will write catchy sub-heading, it will take a long time..."
-    />
+    <WorksDiscover />
     <ReasonsPrices />
     <WorksStepOne />
     <HeroReviews />
-    <HomeFaq style="margin-top: -160px" />
+    <HomeFaq style="margin-top: -80px" />
     <HeroForm style="margin-bottom: 150px" />
     <HomeBlog
       title="Blog"

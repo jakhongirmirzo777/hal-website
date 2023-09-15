@@ -39,7 +39,10 @@
   .cta {
     &__wrapper {
       flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       gap: 90px;
+      padding: 80px 160px;
     }
 
     &__title {

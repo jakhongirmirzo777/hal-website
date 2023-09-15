@@ -12,10 +12,9 @@
         Logistics
       </p>
       <div class="banner__input">
-        <input placeholder="Enter your phone number" type="text" />
-        <span class="banner__input__icon">
-          <VIcon icon="arrow-right-white" />
-        </span>
+        <button @click="$scroll('home-form')">
+          Get your Car Shipping Estimate
+        </button>
       </div>
     </div>
     <div class="banner__bottom">
@@ -25,10 +24,8 @@
 </template>
 
 <script>
-import VIcon from '~/components/ui/VIcon'
 export default {
   name: 'HomeBanner',
-  components: { VIcon },
 }
 </script>
 

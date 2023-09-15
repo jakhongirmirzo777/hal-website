@@ -23,6 +23,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:link,
+a:visited,
+a:active {
+  color: inherit;
+}
+
 *:focus {
   outline: none;
 }

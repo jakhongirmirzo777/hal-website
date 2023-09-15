@@ -14,6 +14,12 @@
           </div>
         </div>
       </div>
+      <div class="blogs__btn">
+        <button @click="showMore">
+          <VIcon icon="spinner" size="16" />
+          <span>{{ isShowMore ? 'Show less' : 'Show more' }}</span>
+        </button>
+      </div>
     </div>
     <div class="blogs__box desktop row container-fluid">
       <div class="blogs__cards col-8">
@@ -36,9 +42,9 @@
           </div>
         </div>
         <div class="blogs__btn">
-          <button>
+          <button @click="showMore">
             <VIcon icon="spinner" size="16" />
-            <span>Show more</span>
+            <span>{{ isShowMore ? 'Show less' : 'Show more' }}</span>
           </button>
         </div>
       </div>
@@ -46,7 +52,8 @@
         <form ref="form" class="blogs-form__form" @submit.prevent="">
           <div class="blogs-form__form__content">
             <h4 class="mb-16">
-              Get an instant quote or call us now at (518)855-6577
+              Get an instant quote or call us now at
+              <a :href="`tel:${phoneLink}`">{{ phoneLinkLong }}</a>
             </h4>
             <div class="blogs-form__tabs">
               <div
@@ -221,10 +228,16 @@ export default {
     allData() {
       return this.isShowMore ? this.data.slice(0) : this.data.slice(0, 4)
     },
+    phoneLink() {
+      return process.env.SUPPORT_PHONE
+    },
+    phoneLinkLong() {
+      return process.env.SUPPORT_PHONE_LONG
+    },
   },
   methods: {
     showMore() {
-      this.isShowMore = true
+      this.isShowMore = !this.isShowMore
     },
   },
 }

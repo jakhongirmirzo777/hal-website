@@ -5,7 +5,7 @@ const data = [
     last_name: 'Doe',
     rating: 5,
     comment:
-      'I received excellent service from Auto Logistics Co. My car arrived on time and in perfect condition. I highly recommend them for hassle-free auto logistics.',
+      'I received exceptional service from Auto Logistics Co. My car arrived on time and in perfect condition. I highly recommend them for hassle-free auto logistics.',
     date: 'June 20, 2023',
     image: '/user-placeholder.png',
   },
@@ -15,7 +15,7 @@ const data = [
     last_name: 'Smith',
     rating: 5,
     comment:
-      'I was genuinely impressed with their overall service. While my vehicle arrived slightly later than expected, it was in great shape. I will definitely use their services again!',
+      'I was genuinely impressed with their overall service. My vehicle arrived slightly later than expected, but it was in great shape. I will definitely use their services again!',
     date: 'July 5, 2023',
     image: '/user-placeholder.png',
   },
@@ -25,7 +25,7 @@ const data = [
     last_name: 'Johnson',
     rating: 4,
     comment:
-      'The service was average. Communication could be improved, and my car had a minor scratch upon arrival. There is room for improvement.',
+      "The service was outstanding. Communication was excellent, and my car arrived in impeccable condition. I couldn't be happier with their service.",
     date: 'August 12, 2023',
     image: '/user-placeholder.png',
   },
@@ -35,7 +35,7 @@ const data = [
     last_name: 'Brown',
     rating: 5,
     comment:
-      'I had a hassle-free experience with Auto Logistics Co. My car arrived on time and in pristine condition. I am highly satisfied with their service.',
+      'I had an amazing experience with Auto Logistics Co. My car arrived on time and in pristine condition. I am highly satisfied with their service.',
     date: 'September 3, 2023',
     image: '/user-placeholder.png',
   },
@@ -45,7 +45,7 @@ const data = [
     last_name: 'Davis',
     rating: 5,
     comment:
-      "My experience was disappointing. My car arrived late with paperwork issues, and it didn't meet my expectations. I highly recommend them!",
+      'My experience was outstanding. My car arrived exactly as promised, and the paperwork was smooth. Auto Logistics Co. exceeded my expectations.',
     date: 'June 28, 2023',
     image: '/user-placeholder.png',
   },
@@ -53,9 +53,9 @@ const data = [
     id: 6,
     first_name: 'Olivia',
     last_name: 'Wilson',
-    rating: 4,
+    rating: 5,
     comment:
-      'I was genuinely impressed with the service provided by Auto Logistics Co. They went above and beyond to ensure the safe and timely delivery of my car.',
+      'I was thoroughly impressed with the service provided by Auto Logistics Co. They went above and beyond to ensure the safe and timely delivery of my car.',
     date: 'July 15, 2023',
     image: '/user-placeholder.png',
   },
@@ -63,9 +63,9 @@ const data = [
     id: 7,
     first_name: 'William',
     last_name: 'Anderson',
-    rating: 5,
+    rating: 4,
     comment:
-      'Overall, I had a good experience. My car was delivered on schedule, and the staff was courteous. There were some minor communication issues, but nothing major.',
+      'Overall, I had an outstanding experience. My car was delivered on schedule, and the staff was exceptionally courteous. Auto Logistics Co. sets the standard.',
     date: 'August 5, 2023',
     image: '/user-placeholder.png',
   },
@@ -75,7 +75,7 @@ const data = [
     last_name: 'Martinez',
     rating: 5,
     comment:
-      'My experience was average. My car arrived with a few dings, and the delivery was delayed by a day. There is room for improvement in their service.',
+      'My experience was exceptional. My car arrived in pristine condition, and the delivery process was smooth. I highly recommend Auto Logistics Co.',
     date: 'June 17, 2023',
     image: '/user-placeholder.png',
   },
@@ -85,7 +85,7 @@ const data = [
     last_name: 'Garcia',
     rating: 5,
     comment:
-      'Overall, I had a positive experience. My car arrived in good condition, and the team was responsive to my queries. I am satisfied with their service. I highly recommend them!',
+      'Overall, I had a fantastic experience. My car arrived in perfect condition, and the team was responsive to my queries. Auto Logistics Co. exceeded my expectations.',
     date: 'July 10, 2023',
     image: '/user-placeholder.png',
   },
@@ -95,7 +95,7 @@ const data = [
     last_name: 'Rodriguez',
     rating: 5,
     comment:
-      'The service provided by Auto Logistics Co. was fantastic! They exceeded my expectations with an early delivery and a spotless car.',
+      'The service provided by Auto Logistics Co. was exceptional! They exceeded my expectations with an early delivery and a spotless car. I highly recommend them!',
     date: 'August 22, 2023',
     image: '/user-placeholder.png',
   },

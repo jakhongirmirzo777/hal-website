@@ -33,6 +33,7 @@ export default {
     { src: '@/plugins/vue-awesome-swiper', ssr: false },
     { src: '@/plugins/vee-validate.js', ssr: false },
     { src: '@/plugins/v-mask.js', ssr: false },
+    { src: '@/plugins/scroll.js', ssr: false },
   ],
 
   // Auto import layouts: https://go.nuxtjs.dev/config-components
@@ -70,9 +71,11 @@ export default {
 
   env: {
     SUPPORT_PHONE: process.env.SUPPORT_PHONE,
+    SUPPORT_PHONE_LONG: process.env.SUPPORT_PHONE_LONG,
   },
 
   publicRuntimeConfig: {
     SUPPORT_PHONE: process.env.SUPPORT_PHONE,
+    SUPPORT_PHONE_LONG: process.env.SUPPORT_PHONE_LONG,
   },
 }

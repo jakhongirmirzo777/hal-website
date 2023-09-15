@@ -25,7 +25,8 @@
       <form ref="form" class="home-form__form" @submit.prevent="">
         <div class="home-form__form__content">
           <h4 class="mb-16">
-            Get an instant quote or call us now at (518)855-6577
+            Get an instant quote or call us now at
+            <a :href="`tel:${phoneLink}`">{{ phoneLinkLong }}</a>
           </h4>
           <div class="home-form__tabs">
             <div
@@ -192,6 +193,14 @@ export default {
     return {
       step: 1,
     }
+  },
+  computed: {
+    phoneLink() {
+      return process.env.SUPPORT_PHONE
+    },
+    phoneLinkLong() {
+      return process.env.SUPPORT_PHONE_LONG
+    },
   },
   mounted() {
     this.addScreenSize()

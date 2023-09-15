@@ -3,6 +3,31 @@
 .faq {
   &__wrapper {
     padding: 90px 24px 0;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    margin-bottom: 50px;
+  }
+
+  &__btn__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 16px 24px;
+    border-radius: 90px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:active {
+      transform: scale(1.2);
+    }
   }
 
   &__title {

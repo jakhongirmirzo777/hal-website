@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="faq__content">
-      <div v-for="item in data" :key="item.id">
+      <div v-for="item in faqs" :key="item.id">
         <VCollapse>
           <template #top="{ toggle }">
             <div class="faq__collapse__top">
@@ -30,6 +30,11 @@
         <VLine v-if="item.id !== data.length" class="my-24" color="#E6E7EB" />
       </div>
     </div>
+    <div class="faq__btn__box">
+      <button class="faq__btn" @click="moreFaqsLoaded = !moreFaqsLoaded">
+        {{ !moreFaqsLoaded ? 'More FAQs' : 'Les FAQs' }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -45,7 +50,13 @@ export default {
   data() {
     return {
       data,
+      moreFaqsLoaded: false,
     }
+  },
+  computed: {
+    faqs() {
+      return this.moreFaqsLoaded ? this.data : this.data.slice(0, 3)
+    },
   },
 }
 </script>
