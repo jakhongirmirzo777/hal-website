@@ -5,6 +5,7 @@
     <Nuxt />
     <TheFooterDesktop />
     <TheFooterMobile />
+    <ThePhone />
   </div>
 </template>
 
@@ -13,8 +14,10 @@ import TheHeaderDesktop from '~/components/layouts/TheHeaderDesktop'
 import TheFooterDesktop from '~/components/layouts/TheFooterDesktop'
 import TheHeaderMobile from '~/components/layouts/TheHeaderMobile'
 import TheFooterMobile from '~/components/layouts/TheFooterMobile'
+import ThePhone from '~/components/layouts/ThePhone'
 export default {
   components: {
+    ThePhone,
     TheFooterMobile,
     TheHeaderMobile,
     TheFooterDesktop,
