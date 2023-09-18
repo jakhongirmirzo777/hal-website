@@ -86,6 +86,10 @@ a:active {
   }
 }
 
+.spinner {
+  animation: spin linear infinite 1s;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -93,4 +97,14 @@ a:active {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -5,26 +5,42 @@
       <p>{{ description }}</p>
     </div>
     <div class="blog__content">
-      <div v-for="item in 3" :key="item" class="blog__item">
-        <img src="/placeholder.webp" alt="photo" />
+      <div v-for="blog in blogs" :key="blog.id" class="blog__item">
+        <img :src="blog.image" alt="photo" />
         <div class="blog__item__bottom">
           <div class="d-flex justify-between align-center mb-4">
-            <h4>The grand resort</h4>
-            <span>Tue, Jul 20</span>
+            <h4>{{ blog.title }}</h4>
+            <span>{{ $formatDate(blog.created_at) }}</span>
           </div>
-          <p>Yasminfurt</p>
+          <p>{{ blog.description }}</p>
         </div>
       </div>
     </div>
-    <div class="d-flex justify-center align-center">
-      <button class="blog__btn">All news</button>
+    <div
+      v-if="links.current_page !== links.last_page"
+      class="d-flex justify-center align-center"
+    >
+      <button
+        class="blog__btn d-flex justify-center align-center"
+        @click="nextPage"
+      >
+        <VIcon
+          v-if="loading"
+          class="mr-5 spinner"
+          icon="spinner-white"
+          size="16"
+        />
+        <span>Load more</span>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import VIcon from '~/components/ui/VIcon'
 export default {
   name: 'HomeBlog',
+  components: { VIcon },
   props: {
     title: {
       type: String,
@@ -33,6 +49,23 @@ export default {
     description: {
       type: String,
       default: '',
+    },
+    blogs: {
+      type: Array,
+      default: () => [],
+    },
+    links: {
+      type: Object,
+      default: () => ({}),
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    nextPage() {
+      this.$emit('next', this.links.current_page + 1)
     },
   },
 }

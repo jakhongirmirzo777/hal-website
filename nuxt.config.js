@@ -34,6 +34,7 @@ export default {
     { src: '@/plugins/vee-validate.js', ssr: false },
     { src: '@/plugins/v-mask.js', ssr: false },
     { src: '@/plugins/scroll.js', ssr: false },
+    { src: '@/plugins/format-date.js', ssr: true },
   ],
 
   // Auto import layouts: https://go.nuxtjs.dev/config-components
@@ -61,7 +62,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_BASE_URL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -72,10 +73,12 @@ export default {
   env: {
     SUPPORT_PHONE: process.env.SUPPORT_PHONE,
     SUPPORT_PHONE_LONG: process.env.SUPPORT_PHONE_LONG,
+    API_BASE_URL: process.env.API_BASE_URL,
   },
 
   publicRuntimeConfig: {
     SUPPORT_PHONE: process.env.SUPPORT_PHONE,
     SUPPORT_PHONE_LONG: process.env.SUPPORT_PHONE_LONG,
+    API_BASE_URL: process.env.API_BASE_URL,
   },
 }
