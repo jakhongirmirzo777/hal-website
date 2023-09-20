@@ -31,7 +31,7 @@
         />
       </div>
       <div
-        v-if="!hideDetails"
+        v-if="!hideDetails && errors && errors[0]"
         class="v-select__error"
         :class="{ focused: isFocused }"
       >
@@ -39,7 +39,7 @@
       </div>
     </div>
     <ul
-      v-if="isFocused"
+      v-if="isFocused && items && items.length"
       class="v-select__list"
       :class="{ 'one-item': parsedItems.length === 1 }"
     >
@@ -190,7 +190,6 @@ export default {
 
   &__error {
     font-size: 14px;
-    height: 20px;
     display: flex;
     align-items: center;
     color: var(--color-red);

@@ -59,7 +59,7 @@
               vid="origin"
               label="Starting location"
               icon="plane"
-              hide-details
+              rules="required"
             />
             <VInputGoogle
               id="destination"
@@ -68,7 +68,7 @@
               vid="destination"
               label="Final destination"
               icon="location"
-              hide-details
+              rules="required"
             />
             <VSelect
               v-model="formData.date"
@@ -76,16 +76,16 @@
               vid="date"
               label="Timeframe"
               icon="clock"
+              rules="required"
               :items="timeframeItems"
-              hide-details
             />
             <VSelect
               v-model="formData.property"
               vid="property"
               label="Property type"
               icon="car"
+              rules="required"
               :items="propertyTypes"
-              hide-details
             />
           </div>
           <div v-show="step === 2" class="home-form__inputs">
@@ -95,8 +95,8 @@
               vid="year"
               label="Year"
               icon="calendar"
+              rules="required"
               :items="years"
-              hide-details
             />
             <VSelect
               v-model="formData.vehicle_make"
@@ -104,8 +104,8 @@
               vid="vehicle_make"
               label="Vehicle make"
               icon="industry"
+              rules="required"
               :items="[]"
-              hide-details
             />
             <VSelect
               v-model="formData.vehicle_model"
@@ -113,14 +113,15 @@
               vid="vehicle_model"
               label="Vehicle model"
               icon="car"
+              rules="required"
               :items="[]"
-              hide-details
             />
             <VSelect
               v-model="formData.vehicle_run"
               vid="vehicle_run"
               label="Vehicle Runs?"
               icon="wrench"
+              rules="required"
               :items="[
                 {
                   text: 'Yes',
@@ -131,7 +132,6 @@
                   value: 'no',
                 },
               ]"
-              hide-details
             />
           </div>
           <div v-show="step === 3" class="home-form__inputs">
@@ -141,7 +141,7 @@
               vid="first_name"
               label="First name"
               icon="user-gray"
-              hide-details
+              rules="required"
             />
             <VInput
               v-model="formData.last_name"
@@ -149,7 +149,7 @@
               vid="last_name"
               label="Last name"
               icon="user-gray"
-              hide-details
+              rules="required"
             />
             <VInput
               v-model="formData.email"
@@ -157,14 +157,14 @@
               vid="email"
               label="Email"
               icon="envelope"
-              hide-details
+              rules="required"
             />
             <VInput
               v-model="formData.phone"
               vid="phone"
               label="Phone"
               icon="phone"
-              hide-details
+              rules="required"
             />
           </div>
         </div>

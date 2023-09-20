@@ -61,8 +61,16 @@ export default {
       default: '',
     },
   },
+  data() {
+    return {
+      timeoutId: null,
+    }
+  },
   mounted() {
-    this.initGoogleMaps()
+    this.timeoutId = setTimeout(this.initGoogleMaps, 1000)
+  },
+  destroyed() {
+    clearTimeout(this.timeoutId)
   },
   methods: {
     initGoogleMaps() {

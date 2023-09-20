@@ -26,7 +26,7 @@
         />
       </div>
       <div
-        v-if="!hideDetails"
+        v-if="!hideDetails && errors && errors[0]"
         class="v-select__error"
         :class="{ focused: isFocused }"
       >
@@ -135,7 +135,6 @@ export default {
 
   &__error {
     font-size: 14px;
-    height: 20px;
     display: flex;
     align-items: center;
     color: var(--color-red);
