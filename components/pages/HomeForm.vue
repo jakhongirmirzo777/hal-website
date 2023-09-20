@@ -34,64 +34,66 @@
               :class="{ active: step === 1 }"
               @click="step = 1"
             >
-              Step 1
+              Destination
             </div>
             <div
               class="home-form__tab"
               :class="{ active: step === 2 }"
               @click="step = 2"
             >
-              Step 2
+              Vehicle
             </div>
             <div
               class="home-form__tab"
               :class="{ active: step === 3 }"
               @click="step = 3"
             >
-              Step 3
+              Date
             </div>
           </div>
           <div v-show="step === 1" class="home-form__inputs">
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="plane" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="Starting location"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="location" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="Final destination"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="clock" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="Timeframe"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="car" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="Car size"
-              />
-            </div>
+            <VInput
+              v-model="formData.origin"
+              class="mb-6"
+              vid="origin"
+              label="Starting location"
+              icon="plane"
+              hide-details
+            />
+            <VInput
+              v-model="formData.destination"
+              class="mb-6"
+              vid="destination"
+              label="Final destination"
+              icon="location"
+              hide-details
+            />
+            <VSelect
+              v-model="formData.date"
+              class="mb-6"
+              vid="date"
+              label="Timeframe"
+              icon="clock"
+              :items="timeframeItems"
+              hide-details
+            />
+            <VSelect
+              v-model="formData.property"
+              vid="property"
+              label="Property type"
+              icon="car"
+              :items="propertyTypes"
+              hide-details
+            />
           </div>
           <div v-show="step === 2" class="home-form__inputs">
             <div class="home-form__group">
               <VIcon class="home-form__icon" size="22" icon="calendar" />
               <select class="home-form__input">
                 <option value="" selected disabled>Year</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
+                <option v-for="year in years" :key="year" :value="year">
+                  {{ year }}
+                </option>
               </select>
               <VIcon
                 class="home-form__icon select"
@@ -176,9 +178,20 @@
 
 <script>
 import VIcon from '~/components/ui/VIcon'
+import VSelect from '~/components/ui/VSelect'
+import { $generateYears } from '~/utils/helpers'
+import VInput from '~/components/ui/VInput'
+
+const FORM_DATA = {
+  date: null,
+  property: null,
+  origin: null,
+  destination: null,
+}
+
 export default {
   name: 'HomeForm',
-  components: { VIcon },
+  components: { VInput, VSelect, VIcon },
   props: {
     title: {
       type: String,
@@ -192,6 +205,44 @@ export default {
   data() {
     return {
       step: 1,
+      years: $generateYears(1990),
+      formData: { ...FORM_DATA },
+      timeframeItems: [
+        {
+          text: 'Within 7 days',
+          value: 'Within 7 days',
+        },
+        {
+          text: '1-2 weeks',
+          value: '1-2 weeks',
+        },
+        {
+          text: '3-6 weeks',
+          value: '3-6 weeks',
+        },
+        {
+          text: 'This month',
+          value: 'This month',
+        },
+        {
+          text: '3 Months +',
+          value: '3 Months +',
+        },
+      ],
+      propertyTypes: [
+        {
+          text: 'Open carrier',
+          value: 'Open carrier',
+        },
+        {
+          text: 'Enclosed carrier',
+          value: 'Enclosed carrier',
+        },
+        {
+          text: 'Drive away',
+          value: 'Drive away',
+        },
+      ],
     }
   },
   computed: {

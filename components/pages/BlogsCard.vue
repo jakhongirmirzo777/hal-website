@@ -61,21 +61,21 @@
                 :class="{ active: step === 1 }"
                 @click="step = 1"
               >
-                Step 1
+                Destination
               </div>
               <div
                 class="blogs-form__tab"
                 :class="{ active: step === 2 }"
                 @click="step = 2"
               >
-                Step 2
+                Vehicle
               </div>
               <div
                 class="blogs-form__tab"
                 :class="{ active: step === 3 }"
                 @click="step = 3"
               >
-                Step 3
+                Date
               </div>
             </div>
             <div v-show="step === 1" class="blogs-form__inputs">

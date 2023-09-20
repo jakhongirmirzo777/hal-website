@@ -34,6 +34,7 @@ export default {
     { src: '@/plugins/vee-validate.js', ssr: false },
     { src: '@/plugins/v-mask.js', ssr: false },
     { src: '@/plugins/scroll.js', ssr: false },
+    { src: '@/plugins/v-click-outside.js', ssr: false },
     { src: '@/plugins/format-date.js', ssr: true },
   ],
 
