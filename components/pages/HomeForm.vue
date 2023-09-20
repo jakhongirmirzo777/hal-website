@@ -48,11 +48,12 @@
               :class="{ active: step === 3 }"
               @click="step = 3"
             >
-              Date
+              Owner
             </div>
           </div>
           <div v-show="step === 1" class="home-form__inputs">
-            <VInput
+            <VInputGoogle
+              id="origin"
               v-model="formData.origin"
               class="mb-6"
               vid="origin"
@@ -60,7 +61,8 @@
               icon="plane"
               hide-details
             />
-            <VInput
+            <VInputGoogle
+              id="destination"
               v-model="formData.destination"
               class="mb-6"
               vid="destination"
@@ -87,85 +89,83 @@
             />
           </div>
           <div v-show="step === 2" class="home-form__inputs">
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="calendar" />
-              <select class="home-form__input">
-                <option value="" selected disabled>Year</option>
-                <option v-for="year in years" :key="year" :value="year">
-                  {{ year }}
-                </option>
-              </select>
-              <VIcon
-                class="home-form__icon select"
-                size="22"
-                icon="chevron-down"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="industry" />
-              <select class="home-form__input">
-                <option value="" selected disabled>Vehicle make</option>
-                <option value="volvo">Acura</option>
-                <option value="saab">Audi</option>
-              </select>
-              <VIcon
-                class="home-form__icon select"
-                size="22"
-                icon="chevron-down"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="car" />
-              <select class="home-form__input">
-                <option value="" selected disabled>Vehicle model</option>
-                <option value="volvo">Giulia</option>
-                <option value="saab">Stelvio</option>
-              </select>
-              <VIcon
-                class="home-form__icon select"
-                size="22"
-                icon="chevron-down"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="wrench" />
-              <select class="home-form__input">
-                <option value="" selected disabled>Vehicle Runs?</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-              <VIcon
-                class="home-form__icon select"
-                size="22"
-                icon="chevron-down"
-              />
-            </div>
+            <VSelect
+              v-model="formData.year"
+              class="mb-6"
+              vid="year"
+              label="Year"
+              icon="calendar"
+              :items="years"
+              hide-details
+            />
+            <VSelect
+              v-model="formData.vehicle_make"
+              class="mb-6"
+              vid="vehicle_make"
+              label="Vehicle make"
+              icon="industry"
+              :items="[]"
+              hide-details
+            />
+            <VSelect
+              v-model="formData.vehicle_model"
+              class="mb-6"
+              vid="vehicle_model"
+              label="Vehicle model"
+              icon="car"
+              :items="[]"
+              hide-details
+            />
+            <VSelect
+              v-model="formData.vehicle_run"
+              vid="vehicle_run"
+              label="Vehicle Runs?"
+              icon="wrench"
+              :items="[
+                {
+                  text: 'Yes',
+                  value: 'yes',
+                },
+                {
+                  text: 'No',
+                  value: 'no',
+                },
+              ]"
+              hide-details
+            />
           </div>
           <div v-show="step === 3" class="home-form__inputs">
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="user-gray" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="First name"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="user-gray" />
-              <input
-                class="home-form__input"
-                type="text"
-                placeholder="Last name"
-              />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="envelope" />
-              <input class="home-form__input" type="text" placeholder="Email" />
-            </div>
-            <div class="home-form__group">
-              <VIcon class="home-form__icon" size="22" icon="phone" />
-              <input class="home-form__input" type="text" placeholder="Phone" />
-            </div>
+            <VInput
+              v-model="formData.first_name"
+              class="mb-6"
+              vid="first_name"
+              label="First name"
+              icon="user-gray"
+              hide-details
+            />
+            <VInput
+              v-model="formData.last_name"
+              class="mb-6"
+              vid="last_name"
+              label="Last name"
+              icon="user-gray"
+              hide-details
+            />
+            <VInput
+              v-model="formData.email"
+              class="mb-6"
+              vid="email"
+              label="Email"
+              icon="envelope"
+              hide-details
+            />
+            <VInput
+              v-model="formData.phone"
+              vid="phone"
+              label="Phone"
+              icon="phone"
+              hide-details
+            />
           </div>
         </div>
         <button type="submit" class="home-form__btn cursor-pointer">
@@ -177,21 +177,27 @@
 </template>
 
 <script>
-import VIcon from '~/components/ui/VIcon'
 import VSelect from '~/components/ui/VSelect'
-import { $generateYears } from '~/utils/helpers'
 import VInput from '~/components/ui/VInput'
+import { $generateYears } from '~/utils/helpers'
+import VInputGoogle from '~/components/ui/VInputGoogle'
 
 const FORM_DATA = {
   date: null,
   property: null,
   origin: null,
   destination: null,
+  first_name: null,
+  last_name: null,
+  year: null,
+  vehicle_make: null,
+  vehicle_model: null,
+  vehicle_run: null,
 }
 
 export default {
   name: 'HomeForm',
-  components: { VInput, VSelect, VIcon },
+  components: { VInputGoogle, VInput, VSelect },
   props: {
     title: {
       type: String,

@@ -4,7 +4,8 @@
     class="v-select"
     tag="div"
     :rules="rules"
-    :vid="vid ? vid : label"
+    :vid="vid"
+    :name="name || label"
   >
     <div class="v-select__box">
       <div class="v-select__box__input">
@@ -15,6 +16,7 @@
           :size="iconSize"
         />
         <input
+          :id="id"
           class="v-select__input"
           type="text"
           :value="value"
@@ -40,7 +42,15 @@ export default {
   name: 'VInput',
   components: { VIcon },
   props: {
+    id: {
+      type: String,
+      default: '',
+    },
     vid: {
+      type: String,
+      default: '',
+    },
+    name: {
       type: String,
       default: '',
     },

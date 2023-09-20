@@ -23,6 +23,13 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap',
       },
     ],
+    script: [
+      {
+        hid: 'google-script',
+        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB-u-QEPIeu4953EDJEx7x5FjIfKYVSIwY&region=US&language=en&libraries=places',
+        async: true,
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

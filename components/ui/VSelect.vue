@@ -117,7 +117,10 @@ export default {
       return !this.value
         ? items
         : items.filter((item) =>
-            item[this.itemText].toLowerCase().includes(this.value.toLowerCase())
+            item[this.itemText]
+              .toString()
+              .toLowerCase()
+              .includes(this.value.toLowerCase())
           )
     },
   },
@@ -209,6 +212,8 @@ export default {
     border: 1px solid var(--color-gray-light);
     border-radius: 12px;
     min-height: 100px;
+    max-height: 250px;
+    overflow-y: auto;
 
     &.one-item {
       .v-select__item:last-child {
