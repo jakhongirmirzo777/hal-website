@@ -84,6 +84,10 @@
 
   &__form {
     display: none;
+
+    form {
+      max-width: 100% !important;
+    }
   }
 }
 
@@ -117,6 +121,7 @@
 
     &__form {
       display: flex;
+      padding-left: 30px;
     }
   }
 }

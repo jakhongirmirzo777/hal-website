@@ -5,7 +5,12 @@
       <p>{{ description }}</p>
     </div>
     <div class="blog__content">
-      <div v-for="blog in blogs" :key="blog.id" class="blog__item">
+      <nuxt-link
+        v-for="blog in blogs"
+        :key="blog.id"
+        :to="`blogs/${blog.slug}`"
+        class="blog__item"
+      >
         <img :src="blog.image" alt="photo" />
         <div class="blog__item__bottom">
           <div class="d-flex justify-between align-center mb-4">
@@ -14,7 +19,7 @@
           </div>
           <p>{{ blog.description }}</p>
         </div>
-      </div>
+      </nuxt-link>
     </div>
     <div
       v-if="links.current_page !== links.last_page"

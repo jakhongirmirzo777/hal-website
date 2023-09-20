@@ -3,21 +3,21 @@
     <h1 class="blogs__title">Hyperion Blog</h1>
     <div class="blogs__box mobile">
       <div class="blogs__cards">
-        <div v-for="item in allData" :key="item.id" class="blogs__card">
+        <div v-for="item in blogs" :key="item.id" class="blogs__card">
           <img :src="item.image" alt="blog" />
           <div class="blogs__content">
             <div class="blogs__card__title">
               <p class="title">{{ item.title }}</p>
-              <p class="date">{{ item.date }}</p>
+              <p class="date">{{ $formatDate(item.created_at) }}</p>
             </div>
-            <span class="place">{{ item.place }}</span>
+            <span class="place">{{ item.description }}</span>
           </div>
         </div>
       </div>
-      <div class="blogs__btn">
-        <button @click="showMore">
-          <VIcon icon="spinner" size="16" />
-          <span>{{ isShowMore ? 'Show less' : 'Show more' }}</span>
+      <div v-if="links.current_page !== links.last_page" class="blogs__btn">
+        <button class="d-flex justify-center align-center" @click="nextPage">
+          <VIcon v-if="loading" class="mr-5 spinner" icon="spinner" size="16" />
+          <span>Load more</span>
         </button>
       </div>
     </div>
@@ -25,30 +25,31 @@
       <div class="blogs__cards col-8">
         <div class="container-fluid">
           <div class="row">
-            <div
-              v-for="item in allData"
-              :key="item.id"
-              class="blogs__card col-6"
-            >
+            <div v-for="item in blogs" :key="item.id" class="blogs__card col-6">
               <img :src="item.image" alt="blog" />
               <div class="blogs__content">
                 <div class="blogs__card__title">
                   <p class="title">{{ item.title }}</p>
-                  <p class="date">{{ item.date }}</p>
+                  <p class="date">{{ $formatDate(item.created_at) }}</p>
                 </div>
-                <span class="place">{{ item.place }}</span>
+                <span class="place">{{ item.description }}</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="blogs__btn">
-          <button @click="showMore">
-            <VIcon icon="spinner" size="16" />
-            <span>{{ isShowMore ? 'Show less' : 'Show more' }}</span>
+        <div v-if="links.current_page !== links.last_page" class="blogs__btn">
+          <button class="d-flex justify-center align-center" @click="nextPage">
+            <VIcon
+              v-if="loading"
+              class="mr-5 spinner"
+              icon="spinner"
+              size="16"
+            />
+            <span>Load more</span>
           </button>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 pt-10">
         <form ref="form" class="blogs-form__form" @submit.prevent="">
           <div class="blogs-form__form__content">
             <h4 class="mb-16">
@@ -211,23 +212,31 @@
 </template>
 
 <script>
-import data from '../../data/blogs-card'
 import VIcon from '~/components/ui/VIcon'
 
 export default {
   name: 'BlogsCard',
   components: { VIcon },
+  props: {
+    blogs: {
+      type: Array,
+      default: () => [],
+    },
+    links: {
+      type: Object,
+      default: () => ({}),
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      data,
-      isShowMore: false,
       step: 1,
     }
   },
   computed: {
-    allData() {
-      return this.isShowMore ? this.data.slice(0) : this.data.slice(0, 4)
-    },
     phoneLink() {
       return process.env.SUPPORT_PHONE
     },
@@ -236,8 +245,8 @@ export default {
     },
   },
   methods: {
-    showMore() {
-      this.isShowMore = !this.isShowMore
+    nextPage() {
+      this.$emit('next', this.links.current_page + 1)
     },
   },
 }

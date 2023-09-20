@@ -1,26 +1,21 @@
 <template>
   <div class="blog__wrapper">
     <div class="blog__top">
-      <button>
+      <button class="cursor-pointer" @click="$router.push('/blogs')">
         <VIcon size="16" icon="chevron-left" />
         <span>Go blog</span>
       </button>
       <div class="blog__breadcrumb">
-        <nuxt-link to="/blogs">Blog</nuxt-link>
+        <nuxt-link to="/blogs">Blogs</nuxt-link>
         <VIcon size="16" icon="chevron-right" />
-        <span>{{ data.slug }}</span>
+        <span>{{ blog.title }}</span>
       </div>
     </div>
-    <img class="blog__image" :src="data.image" alt="image" />
+    <img class="blog__image" :src="blog.image" alt="image" />
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-8">
-          <div class="blog__content">
-            <div v-for="item in data.content" :key="item.id" class="blog__item">
-              <h1>{{ item.title }}</h1>
-              <p>{{ item.description }}</p>
-            </div>
-          </div>
+          <div class="blog__content" v-html="blog.content"></div>
         </div>
         <div class="col-md-4 d-flex justify-end blog__form">
           <FillForm />
@@ -31,16 +26,16 @@
 </template>
 
 <script>
-import data from '../../data/blog-page'
 import VIcon from '~/components/ui/VIcon'
 import FillForm from '~/components/pages/FillForm'
 export default {
   name: 'BlogContent',
   components: { FillForm, VIcon },
-  data() {
-    return {
-      data,
-    }
+  props: {
+    blog: {
+      type: Object,
+      default: () => ({}),
+    },
   },
 }
 </script>

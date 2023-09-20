@@ -2,16 +2,21 @@
   <div class="blog__wrapper">
     <h2>Related Articles</h2>
     <div class="blog__articles">
-      <div v-for="item in data.blogs" :key="item.id" class="blog__blog">
+      <nuxt-link
+        v-for="item in blogs"
+        :key="item.id"
+        :to="`/blogs/${item.slug}`"
+        class="blog__blog"
+      >
         <img class="image" :src="item.image" alt="image" />
         <div class="content">
           <div class="top">
             <p>{{ item.title }}</p>
-            <span>{{ item.date }}</span>
+            <span>{{ $formatDate(item.created_at) }}</span>
           </div>
-          <p class="place">{{ item.place }}</p>
+          <p class="place">{{ item.description }}</p>
         </div>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -20,6 +25,12 @@
 import data from '../../data/blog-page'
 export default {
   name: 'BlogArticles',
+  props: {
+    blogs: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
       data,

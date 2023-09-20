@@ -20,6 +20,7 @@
 
   &__blog {
     margin-bottom: 24px;
+    text-decoration: none;
 
     .image {
       height: 260px;
@@ -80,6 +81,7 @@
     &__articles {
       flex-direction: row;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     &__blog {
