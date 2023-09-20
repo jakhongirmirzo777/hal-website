@@ -3,7 +3,12 @@
     <h1 class="blogs__title">Hyperion Blog</h1>
     <div class="blogs__box mobile">
       <div class="blogs__cards">
-        <div v-for="item in blogs" :key="item.id" class="blogs__card">
+        <nuxt-link
+          v-for="item in blogs"
+          :key="item.id"
+          :to="`/blogs/${item.slug}`"
+          class="blogs__card"
+        >
           <img :src="item.image" alt="blog" />
           <div class="blogs__content">
             <div class="blogs__card__title">
@@ -12,7 +17,7 @@
             </div>
             <span class="place">{{ item.description }}</span>
           </div>
-        </div>
+        </nuxt-link>
       </div>
       <div v-if="links.current_page !== links.last_page" class="blogs__btn">
         <button class="d-flex justify-center align-center" @click="nextPage">
@@ -25,7 +30,12 @@
       <div class="blogs__cards col-8">
         <div class="container-fluid">
           <div class="row">
-            <div v-for="item in blogs" :key="item.id" class="blogs__card col-6">
+            <nuxt-link
+              v-for="item in blogs"
+              :key="item.id"
+              :to="`/blogs/${item.slug}`"
+              class="blogs__card col-6"
+            >
               <img :src="item.image" alt="blog" />
               <div class="blogs__content">
                 <div class="blogs__card__title">
@@ -34,7 +44,7 @@
                 </div>
                 <span class="place">{{ item.description }}</span>
               </div>
-            </div>
+            </nuxt-link>
           </div>
         </div>
         <div v-if="links.current_page !== links.last_page" class="blogs__btn">
