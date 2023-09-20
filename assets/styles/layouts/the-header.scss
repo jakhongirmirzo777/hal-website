@@ -83,7 +83,7 @@
       top: 71px;
       z-index: 8;
       background-color: var(--color-white);
-      padding: 56px 0 160px;
+      padding: 56px 0 calc(71px + 56px);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
